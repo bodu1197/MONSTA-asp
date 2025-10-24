@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Card } from '../components/ui/card'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function LoginPage() {
   const [isSignUp, setIsSignUp] = useState(false)
@@ -88,18 +89,21 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <Card className="max-w-md w-full p-8">
-        <h1 className="text-3xl font-bold text-center mb-2" style={{ color: '#0f3460' }}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 relative">
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
+      <Card className="max-w-md w-full p-8 bg-white dark:bg-gray-800">
+        <h1 className="text-3xl font-bold text-center mb-2 text-[#0f3460] dark:text-blue-400">
           돌파구
         </h1>
-        <p className="text-center text-sm text-muted-foreground mb-8">
+        <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-8">
           {isSignUp ? '새로운 계정을 만드세요' : '계정에 로그인하세요'}
         </p>
 
         <form onSubmit={isSignUp ? handleSignUp : handleLogin} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2">이메일</label>
+            <label className="block text-sm font-medium mb-2 text-gray-900 dark:text-gray-100">이메일</label>
             <Input
               type="email"
               value={email}
@@ -110,7 +114,7 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">비밀번호</label>
+            <label className="block text-sm font-medium mb-2 text-gray-900 dark:text-gray-100">비밀번호</label>
             <Input
               type="password"
               value={password}
@@ -122,7 +126,7 @@ export default function LoginPage() {
 
           {isSignUp && (
             <div>
-              <label className="block text-sm font-medium mb-2">비밀번호 확인</label>
+              <label className="block text-sm font-medium mb-2 text-gray-900 dark:text-gray-100">비밀번호 확인</label>
               <Input
                 type="password"
                 value={confirmPassword}
@@ -205,8 +209,7 @@ export default function LoginPage() {
               setPassword('')
               setConfirmPassword('')
             }}
-            className="text-sm hover:underline"
-            style={{ color: '#0f3460' }}
+            className="text-sm hover:underline text-[#0f3460] dark:text-blue-400"
           >
             {isSignUp ? '이미 계정이 있으신가요? 로그인' : '계정이 없으신가요? 회원가입'}
           </button>

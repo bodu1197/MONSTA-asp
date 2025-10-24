@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase'
 import { Button } from '../components/ui/button'
 import { Card } from '../components/ui/card'
 import { Avatar, AvatarFallback } from '../components/ui/avatar'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function HomePage() {
   const handleLogout = async () => {
@@ -15,17 +16,18 @@ export default function HomePage() {
   const posts: any[] = []
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
+      <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold" style={{ color: '#0f3460' }}>돌파구</h1>
-          <nav className="flex gap-6">
-            <Link to="/" className="font-semibold" style={{ color: '#0f3460' }}>홈</Link>
-            <Link to="/explore" className="hover:text-blue-600">탐색</Link>
-            <Link to="/categories" className="hover:text-blue-600">카테고리</Link>
-            <Link to="/profile" className="hover:text-blue-600">프로필</Link>
-            <button onClick={handleLogout} className="text-red-600 hover:text-red-700">로그아웃</button>
+          <h1 className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</h1>
+          <nav className="flex gap-6 items-center">
+            <Link to="/" className="font-semibold text-[#0f3460] dark:text-blue-400">홈</Link>
+            <Link to="/explore" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">탐색</Link>
+            <Link to="/categories" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">카테고리</Link>
+            <Link to="/profile" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">프로필</Link>
+            <ThemeToggle />
+            <button onClick={handleLogout} className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">로그아웃</button>
           </nav>
         </div>
       </header>
@@ -33,16 +35,16 @@ export default function HomePage() {
       {/* Main Content - Feed */}
       <div className="w-full max-w-2xl mx-auto px-0">
         {/* Stories Section */}
-        <div className="border-b bg-background sticky top-16 md:top-16 z-40 pb-3 pt-3 md:pb-4 md:pt-4">
+        <div className="border-b dark:border-gray-700 bg-white dark:bg-gray-800 sticky top-16 md:top-16 z-40 pb-3 pt-3 md:pb-4 md:pt-4">
           <div className="flex gap-3 md:gap-4 overflow-x-auto px-3 md:px-4 scrollbar-hide">
             {/* Your Story */}
             <div className="flex flex-col items-center gap-1.5 md:gap-2 min-w-[70px] md:min-w-[80px]">
               <div className="relative">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted flex items-center justify-center border-2 border-dashed border-muted-foreground/30 cursor-pointer hover:bg-muted/80 transition active:scale-95">
-                  <Plus style={{ width: '20px', height: '20px' }} className="text-muted-foreground md:w-6 md:h-6" />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition active:scale-95">
+                  <Plus style={{ width: '20px', height: '20px' }} className="text-gray-600 dark:text-gray-300 md:w-6 md:h-6" />
                 </div>
               </div>
-              <span className="text-[10px] md:text-xs text-center font-medium">내 스토리</span>
+              <span className="text-[10px] md:text-xs text-center font-medium text-gray-900 dark:text-gray-100">내 스토리</span>
             </div>
 
             {/* Other Stories */}
@@ -70,7 +72,7 @@ export default function HomePage() {
         {/* Feed Posts */}
         <div className="pb-4 md:pb-8 px-0">
           {posts.length === 0 ? (
-            <div className="text-center py-12 text-muted-foreground">
+            <div className="text-center py-12 text-gray-600 dark:text-gray-400">
               <p className="text-lg mb-2">아직 포스트가 없습니다</p>
               <p className="text-sm">다른 크리에이터를 팔로우하여 피드를 채워보세요!</p>
             </div>
