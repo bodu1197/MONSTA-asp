@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Input } from '../components/ui/input'
 import { Card } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function CategoriesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -17,15 +18,16 @@ export default function CategoriesPage() {
     : null
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold" style={{ color: '#0f3460' }}>돌파구</Link>
-          <nav className="flex gap-6">
-            <Link to="/" className="hover:text-blue-600">홈</Link>
-            <Link to="/explore" className="hover:text-blue-600">탐색</Link>
-            <Link to="/categories" className="font-semibold" style={{ color: '#0f3460' }}>카테고리</Link>
-            <Link to="/profile" className="hover:text-blue-600">프로필</Link>
+          <Link to="/" className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</Link>
+          <nav className="flex gap-6 items-center">
+            <Link to="/" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">홈</Link>
+            <Link to="/explore" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">탐색</Link>
+            <Link to="/categories" className="font-semibold text-[#0f3460] dark:text-blue-400">카테고리</Link>
+            <Link to="/profile" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">프로필</Link>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -34,7 +36,7 @@ export default function CategoriesPage() {
         {/* Search Section */}
         <div className="mb-8 sm:mb-12">
           <div className="relative max-w-2xl mx-auto">
-            <Search style={{ width: '20px', height: '20px' }} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
+            <Search style={{ width: '20px', height: '20px' }} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
             <Input
               type="search"
               placeholder="카테고리, 서비스를 검색하세요..."
@@ -47,8 +49,8 @@ export default function CategoriesPage() {
         {trendingCategories.length > 0 && (
           <section className="mb-8 sm:mb-12">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <TrendingUp style={{ width: '24px', height: '24px' }} className="text-primary sm:w-7 sm:h-7" />
-              <h2 className="text-xl sm:text-2xl font-bold">트렌딩</h2>
+              <TrendingUp style={{ width: '24px', height: '24px' }} className="text-[#0f3460] dark:text-blue-400 sm:w-7 sm:h-7" />
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">트렌딩</h2>
             </div>
             <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 scrollbar-hide">
               {trendingCategories.map((category) => (
@@ -115,8 +117,8 @@ export default function CategoriesPage() {
           /* All Categories Grid */
           <section>
             <div className="mb-4 sm:mb-6">
-              <h2 className="text-xl sm:text-2xl font-bold mb-2">모든 카테고리</h2>
-              <p className="text-sm sm:text-base text-muted-foreground">
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 dark:text-gray-100">모든 카테고리</h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                 다양한 서비스 카테고리를 탐색하세요
               </p>
             </div>
@@ -148,7 +150,7 @@ export default function CategoriesPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-muted-foreground">
+              <div className="text-center py-12 text-gray-600 dark:text-gray-400">
                 <p className="text-lg mb-2">카테고리가 아직 없습니다</p>
                 <p className="text-sm">곧 다양한 카테고리가 추가될 예정입니다!</p>
               </div>
@@ -160,22 +162,22 @@ export default function CategoriesPage() {
         <section className="mt-12 sm:mt-16 text-center">
           <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-3xl mx-auto">
             <div>
-              <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">
+              <div className="text-2xl sm:text-4xl font-bold text-[#0f3460] dark:text-blue-400 mb-1 sm:mb-2">
                 0
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">전체 카테고리</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">전체 카테고리</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">
+              <div className="text-2xl sm:text-4xl font-bold text-[#0f3460] dark:text-blue-400 mb-1 sm:mb-2">
                 0
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">대분류</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">대분류</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">
+              <div className="text-2xl sm:text-4xl font-bold text-[#0f3460] dark:text-blue-400 mb-1 sm:mb-2">
                 0
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">크리에이터</div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">크리에이터</div>
             </div>
           </div>
         </section>

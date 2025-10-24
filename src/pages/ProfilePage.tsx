@@ -7,6 +7,7 @@ import { Card } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
 import { Avatar, AvatarFallback } from '../components/ui/avatar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function ProfilePage() {
   const [loading, setLoading] = useState(true)
@@ -42,20 +43,21 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white border-b sticky top-0 z-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+        <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold" style={{ color: '#0f3460' }}>돌파구</Link>
-            <nav className="flex gap-6">
-              <Link to="/" className="hover:text-blue-600">홈</Link>
-              <Link to="/explore" className="hover:text-blue-600">탐색</Link>
-              <Link to="/categories" className="hover:text-blue-600">카테고리</Link>
-              <Link to="/profile" className="font-semibold" style={{ color: '#0f3460' }}>프로필</Link>
+            <Link to="/" className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</Link>
+            <nav className="flex gap-6 items-center">
+              <Link to="/" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">홈</Link>
+              <Link to="/explore" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">탐색</Link>
+              <Link to="/categories" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">카테고리</Link>
+              <Link to="/profile" className="font-semibold text-[#0f3460] dark:text-blue-400">프로필</Link>
+              <ThemeToggle />
             </nav>
           </div>
         </header>
         <div className="w-full max-w-5xl mx-auto px-4 py-8">
-          <div className="text-center py-12 text-muted-foreground">
+          <div className="text-center py-12 text-gray-600 dark:text-gray-400">
             로딩 중...
           </div>
         </div>
@@ -79,27 +81,28 @@ export default function ProfilePage() {
   })
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold" style={{ color: '#0f3460' }}>돌파구</Link>
-          <nav className="flex gap-6">
-            <Link to="/" className="hover:text-blue-600">홈</Link>
-            <Link to="/explore" className="hover:text-blue-600">탐색</Link>
-            <Link to="/categories" className="hover:text-blue-600">카테고리</Link>
-            <Link to="/profile" className="font-semibold" style={{ color: '#0f3460' }}>프로필</Link>
+          <Link to="/" className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</Link>
+          <nav className="flex gap-6 items-center">
+            <Link to="/" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">홈</Link>
+            <Link to="/explore" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">탐색</Link>
+            <Link to="/categories" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">카테고리</Link>
+            <Link to="/profile" className="font-semibold text-[#0f3460] dark:text-blue-400">프로필</Link>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
 
       <div className="w-full max-w-5xl mx-auto px-4 py-8">
         {/* Profile Header */}
-        <Card className="p-8 mb-6">
+        <Card className="p-8 mb-6 bg-white dark:bg-gray-800">
           <div className="flex flex-col md:flex-row gap-6">
             {/* Avatar */}
             <div className="flex flex-col items-center md:items-start">
               <Avatar className="w-32 h-32 mb-4">
-                <AvatarFallback className="bg-primary/10 text-primary font-bold text-4xl">
+                <AvatarFallback className="bg-primary/10 text-primary dark:bg-blue-500/10 dark:text-blue-400 font-bold text-4xl">
                   {initials}
                 </AvatarFallback>
               </Avatar>
@@ -107,16 +110,16 @@ export default function ProfilePage() {
               {/* Stats - Mobile */}
               <div className="flex gap-6 md:hidden mb-4">
                 <div className="text-center">
-                  <div className="font-bold text-xl">{posts?.length || 0}</div>
-                  <div className="text-xs text-muted-foreground">포스트</div>
+                  <div className="font-bold text-xl text-gray-900 dark:text-gray-100">{posts?.length || 0}</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">포스트</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-xl">{followerCount || 0}</div>
-                  <div className="text-xs text-muted-foreground">팔로워</div>
+                  <div className="font-bold text-xl text-gray-900 dark:text-gray-100">{followerCount || 0}</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">팔로워</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-xl">{followingCount || 0}</div>
-                  <div className="text-xs text-muted-foreground">팔로잉</div>
+                  <div className="font-bold text-xl text-gray-900 dark:text-gray-100">{followingCount || 0}</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">팔로잉</div>
                 </div>
               </div>
             </div>
@@ -126,13 +129,13 @@ export default function ProfilePage() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h1 className="text-2xl font-bold">{user.username || '사용자'}</h1>
+                    <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{user.username || '사용자'}</h1>
                     {user.is_verified && (
-                      <Badge className="bg-primary text-white">인증</Badge>
+                      <Badge className="bg-primary text-white dark:bg-blue-500">인증</Badge>
                     )}
                   </div>
                   {user.full_name && (
-                    <p className="text-muted-foreground">{user.full_name}</p>
+                    <p className="text-gray-600 dark:text-gray-400">{user.full_name}</p>
                   )}
                 </div>
                 <Button variant="outline" size="icon">
@@ -143,31 +146,31 @@ export default function ProfilePage() {
               {/* Stats - Desktop */}
               <div className="hidden md:flex gap-6 mb-4">
                 <div>
-                  <span className="font-bold">{posts?.length || 0}</span>{' '}
-                  <span className="text-muted-foreground">포스트</span>
+                  <span className="font-bold text-gray-900 dark:text-gray-100">{posts?.length || 0}</span>{' '}
+                  <span className="text-gray-600 dark:text-gray-400">포스트</span>
                 </div>
                 <div>
-                  <span className="font-bold">{followerCount || 0}</span>{' '}
-                  <span className="text-muted-foreground">팔로워</span>
+                  <span className="font-bold text-gray-900 dark:text-gray-100">{followerCount || 0}</span>{' '}
+                  <span className="text-gray-600 dark:text-gray-400">팔로워</span>
                 </div>
                 <div>
-                  <span className="font-bold">{followingCount || 0}</span>{' '}
-                  <span className="text-muted-foreground">팔로잉</span>
+                  <span className="font-bold text-gray-900 dark:text-gray-100">{followingCount || 0}</span>{' '}
+                  <span className="text-gray-600 dark:text-gray-400">팔로잉</span>
                 </div>
                 {reviews && reviews.length > 0 && (
                   <div className="flex items-center gap-1">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-bold">{averageRating.toFixed(1)}</span>{' '}
-                    <span className="text-muted-foreground">({reviews.length})</span>
+                    <span className="font-bold text-gray-900 dark:text-gray-100">{averageRating.toFixed(1)}</span>{' '}
+                    <span className="text-gray-600 dark:text-gray-400">({reviews.length})</span>
                   </div>
                 )}
               </div>
 
               {/* Bio */}
-              {user.bio && <p className="mb-4">{user.bio}</p>}
+              {user.bio && <p className="mb-4 text-gray-900 dark:text-gray-100">{user.bio}</p>}
 
               {/* Meta Info */}
-              <div className="space-y-2 mb-4 text-sm text-muted-foreground">
+              <div className="space-y-2 mb-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <Briefcase className="h-4 w-4" />
                   가입일: {joinedDate}
@@ -221,7 +224,7 @@ export default function ProfilePage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-muted-foreground">
+              <div className="text-center py-12 text-gray-600 dark:text-gray-400">
                 <p className="text-lg mb-2">아직 포트폴리오가 없습니다</p>
                 <p className="text-sm">첫 번째 작품을 업로드해보세요!</p>
               </div>
@@ -230,7 +233,7 @@ export default function ProfilePage() {
 
           {/* Services Tab */}
           <TabsContent value="services" className="mt-6">
-            <div className="text-center py-12 text-muted-foreground">
+            <div className="text-center py-12 text-gray-600 dark:text-gray-400">
               <p className="text-lg mb-2">제공 중인 서비스가 없습니다</p>
               <p className="text-sm">서비스를 등록하여 수익을 창출해보세요!</p>
             </div>
@@ -241,7 +244,7 @@ export default function ProfilePage() {
             {reviews && reviews.length > 0 ? (
               <div className="space-y-4">
                 {reviews.map((review: any) => (
-                  <Card key={review.id} className="p-6">
+                  <Card key={review.id} className="p-6 bg-white dark:bg-gray-800">
                     <div className="flex items-start gap-4">
                       <Avatar className="w-12 h-12">
                         <AvatarFallback className="bg-primary/10 text-primary font-semibold">
@@ -279,7 +282,7 @@ export default function ProfilePage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-muted-foreground">
+              <div className="text-center py-12 text-gray-600 dark:text-gray-400">
                 <p className="text-lg mb-2">아직 리뷰가 없습니다</p>
                 <p className="text-sm">서비스를 제공하고 첫 리뷰를 받아보세요!</p>
               </div>

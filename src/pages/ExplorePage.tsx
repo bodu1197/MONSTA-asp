@@ -6,6 +6,7 @@ import { Card } from '../components/ui/card'
 import { Button } from '../components/ui/button'
 import { Badge } from '../components/ui/badge'
 import { Avatar, AvatarFallback } from '../components/ui/avatar'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function ExplorePage() {
   // TODO: 실제 데이터로 교체
@@ -14,15 +15,16 @@ export default function ExplorePage() {
   const [popularSearches] = useState<string[]>([])
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold" style={{ color: '#0f3460' }}>돌파구</Link>
-          <nav className="flex gap-6">
-            <Link to="/" className="hover:text-blue-600">홈</Link>
-            <Link to="/explore" className="font-semibold" style={{ color: '#0f3460' }}>탐색</Link>
-            <Link to="/categories" className="hover:text-blue-600">카테고리</Link>
-            <Link to="/profile" className="hover:text-blue-600">프로필</Link>
+          <Link to="/" className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</Link>
+          <nav className="flex gap-6 items-center">
+            <Link to="/" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">홈</Link>
+            <Link to="/explore" className="font-semibold text-[#0f3460] dark:text-blue-400">탐색</Link>
+            <Link to="/categories" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">카테고리</Link>
+            <Link to="/profile" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">프로필</Link>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -31,7 +33,7 @@ export default function ExplorePage() {
         {/* Search Section */}
         <div className="mb-12">
           <div className="relative max-w-2xl mx-auto mb-4">
-            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
             <Input
               type="search"
               placeholder="크리에이터, 서비스, 태그 검색..."
@@ -64,8 +66,8 @@ export default function ExplorePage() {
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-bold mb-1">주목받는 크리에이터</h2>
-              <p className="text-sm text-muted-foreground">인기 상승 중인 전문가</p>
+              <h2 className="text-2xl font-bold mb-1 text-gray-900 dark:text-gray-100">주목받는 크리에이터</h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400">인기 상승 중인 전문가</p>
             </div>
           </div>
 
@@ -116,7 +118,7 @@ export default function ExplorePage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 text-muted-foreground">
+            <div className="text-center py-12 text-gray-600 dark:text-gray-400">
               <p className="text-lg mb-2">크리에이터가 아직 없습니다</p>
               <p className="text-sm">첫 번째 크리에이터가 되어보세요!</p>
             </div>
@@ -126,8 +128,8 @@ export default function ExplorePage() {
         {/* Trending Works */}
         <section>
           <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="h-6 w-6 text-primary" />
-            <h2 className="text-2xl font-bold">트렌딩 작업물</h2>
+            <TrendingUp className="h-6 w-6 text-[#0f3460] dark:text-blue-400" />
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">트렌딩 작업물</h2>
           </div>
 
           {trendingPosts.length > 0 ? (
@@ -170,7 +172,7 @@ export default function ExplorePage() {
               </div>
             </>
           ) : (
-            <div className="text-center py-12 text-muted-foreground">
+            <div className="text-center py-12 text-gray-600 dark:text-gray-400">
               <p className="text-lg mb-2">트렌딩 작업물이 아직 없습니다</p>
               <p className="text-sm">포트폴리오를 업로드하여 주목받아보세요!</p>
             </div>
