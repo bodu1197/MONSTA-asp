@@ -749,8 +749,10 @@ export default function LoginPage() {
         <div style={{
           textAlign: 'center',
           fontSize: '14px',
-          color: isDark ? '#e8f0ff' : '#1a2332',
         }}>
+          <span style={{ color: isDark ? '#e8f0ff' : '#1a2332' }}>
+            {isSignUp ? '이미 계정이 있으신가요? ' : '계정이 없으신가요? '}
+          </span>
           <button
             onClick={() => {
               setIsSignUp(!isSignUp)
@@ -784,7 +786,7 @@ export default function LoginPage() {
               e.currentTarget.style.textDecoration = 'none'
             }}
           >
-            {isSignUp ? '이미 계정이 있으신가요? 로그인' : '계정이 없으신가요? 회원가입'}
+            {isSignUp ? '로그인' : '회원가입'}
           </button>
         </div>
       </div>
