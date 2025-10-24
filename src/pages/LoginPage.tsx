@@ -199,7 +199,7 @@ export default function LoginPage() {
         }
 
         .password-strength {
-          margin-top: 8px;
+          margin-top: 6px;
           height: 4px;
           background: ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'};
           border-radius: 2px;
