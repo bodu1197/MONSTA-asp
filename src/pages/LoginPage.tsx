@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
-import { Moon, Sun } from 'lucide-react'
 
 export default function LoginPage() {
   const [isSignUp, setIsSignUp] = useState(false)
@@ -13,17 +12,19 @@ export default function LoginPage() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('login-theme') as 'light' | 'dark'
-    if (savedTheme) {
-      setTheme(savedTheme)
-    }
-  }, [])
+    // 브라우저 설정에 따라 자동으로 테마 설정
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    setTheme(isDark ? 'dark' : 'light')
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    setTheme(newTheme)
-    localStorage.setItem('login-theme', newTheme)
-  }
+    // 브라우저 설정 변경 감지
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? 'dark' : 'light')
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -151,42 +152,6 @@ export default function LoginPage() {
           }
         }
       `}</style>
-
-      {/* Theme Toggle */}
-      <button
-        onClick={toggleTheme}
-        style={{
-          position: 'fixed',
-          top: '24px',
-          right: '24px',
-          background: isDark ? 'rgba(30, 45, 65, 0.7)' : 'rgba(255, 255, 255, 0.9)',
-          border: `1px solid ${isDark ? 'rgba(100, 150, 200, 0.15)' : 'rgba(0, 0, 0, 0.08)'}`,
-          borderRadius: '50px',
-          padding: '8px 16px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          cursor: 'pointer',
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-          transition: 'all 0.3s ease',
-          zIndex: 1000,
-          color: isDark ? '#e8f0ff' : '#1a2332',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'translateY(-2px)'
-          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.15)'
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = 'translateY(0)'
-          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)'
-        }}
-      >
-        {isDark ? <Moon size={20} /> : <Sun size={20} />}
-        <span style={{ fontSize: '13px', fontWeight: 500 }}>
-          {isDark ? '다크 모드' : '라이트 모드'}
-        </span>
-      </button>
 
       {/* Login Container */}
       <div
