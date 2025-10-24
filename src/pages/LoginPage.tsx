@@ -302,8 +302,8 @@ export default function LoginPage() {
           boxShadow: isDark ? '0 8px 32px rgba(0, 0, 0, 0.4)' : '0 8px 32px rgba(0, 0, 0, 0.1)',
           padding: '48px 40px',
           width: '100%',
-          maxWidth: isSignUp ? '480px' : '420px',
-          transition: 'transform 0.3s ease, box-shadow 0.3s ease, max-width 0.3s ease',
+          maxWidth: '480px',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'translateY(-2px)'
