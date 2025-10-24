@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase'
 
 export default function LoginPage() {
   const [isSignUp, setIsSignUp] = useState(false)
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -10,6 +11,11 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
+  const [passwordStrength, setPasswordStrength] = useState(0)
+  const [agreeAll, setAgreeAll] = useState(false)
+  const [agreeTerms, setAgreeTerms] = useState(false)
+  const [agreePrivacy, setAgreePrivacy] = useState(false)
+  const [agreeMarketing, setAgreeMarketing] = useState(false)
 
   useEffect(() => {
     // 브라우저 설정에 따라 자동으로 테마 설정
@@ -25,6 +31,36 @@ export default function LoginPage() {
     mediaQuery.addEventListener('change', handleChange)
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
+
+  // 비밀번호 강도 계산
+  useEffect(() => {
+    if (password.length === 0) {
+      setPasswordStrength(0)
+      return
+    }
+
+    let strength = 0
+    if (password.length >= 8) strength++
+    if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++
+    if (/\d/.test(password)) strength++
+    if (/[^a-zA-Z0-9]/.test(password)) strength++
+
+    setPasswordStrength(strength)
+  }, [password])
+
+  // 전체 동의 체크
+  useEffect(() => {
+    if (agreeAll) {
+      setAgreeTerms(true)
+      setAgreePrivacy(true)
+      setAgreeMarketing(true)
+    }
+  }, [agreeAll])
+
+  // 개별 체크박스 변경 시 전체 동의 업데이트
+  useEffect(() => {
+    setAgreeAll(agreeTerms && agreePrivacy && agreeMarketing)
+  }, [agreeTerms, agreePrivacy, agreeMarketing])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -49,6 +85,18 @@ export default function LoginPage() {
     setError('')
     setSuccess('')
 
+    if (!agreeTerms || !agreePrivacy) {
+      setError('필수 약관에 동의해주세요')
+      setLoading(false)
+      return
+    }
+
+    if (password.length < 8) {
+      setError('비밀번호는 8자 이상이어야 합니다')
+      setLoading(false)
+      return
+    }
+
     if (password !== confirmPassword) {
       setError('비밀번호가 일치하지 않습니다')
       setLoading(false)
@@ -58,12 +106,18 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        data: {
+          name: name,
+        },
+      },
     })
 
     if (error) {
       setError(error.message)
     } else {
       setSuccess('회원가입이 완료되었습니다! 이메일을 확인해주세요.')
+      setName('')
       setEmail('')
       setPassword('')
       setConfirmPassword('')
@@ -101,6 +155,12 @@ export default function LoginPage() {
   }
 
   const isDark = theme === 'dark'
+  const getPasswordStrengthClass = () => {
+    if (passwordStrength === 0) return ''
+    if (passwordStrength <= 1) return 'weak'
+    if (passwordStrength <= 2) return 'medium'
+    return 'strong'
+  }
 
   return (
     <div
@@ -138,10 +198,88 @@ export default function LoginPage() {
           }
         }
 
+        .password-strength {
+          margin-top: 8px;
+          height: 4px;
+          background: ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'};
+          border-radius: 2px;
+          overflow: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .password-strength.visible {
+          opacity: 1;
+        }
+
+        .password-strength-bar {
+          height: 100%;
+          width: 0%;
+          transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        .password-strength-bar.weak {
+          width: 33%;
+          background-color: #ea4335;
+        }
+
+        .password-strength-bar.medium {
+          width: 66%;
+          background-color: #fbbc05;
+        }
+
+        .password-strength-bar.strong {
+          width: 100%;
+          background-color: #34a853;
+        }
+
+        .checkbox-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+          cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+          cursor: pointer;
+          accent-color: #5b9aff;
+        }
+
+        .checkbox-item label {
+          font-size: 14px;
+          color: ${isDark ? '#e8f0ff' : '#1a2332'};
+          cursor: pointer;
+          margin: 0;
+        }
+
+        .checkbox-item label a {
+          color: #5b9aff;
+          text-decoration: none;
+        }
+
+        .checkbox-item label a:hover {
+          text-decoration: underline;
+        }
+
+        .input-error {
+          border-color: #ea4335 !important;
+        }
+
+        .input-success {
+          border-color: #34a853 !important;
+        }
+
         @media (max-width: 768px) {
           .login-container {
             max-width: 100% !important;
             padding: 32px 24px !important;
+          }
+
+          .checkbox-item label {
+            font-size: 13px;
           }
         }
 
@@ -164,8 +302,8 @@ export default function LoginPage() {
           boxShadow: isDark ? '0 8px 32px rgba(0, 0, 0, 0.4)' : '0 8px 32px rgba(0, 0, 0, 0.1)',
           padding: '48px 40px',
           width: '100%',
-          maxWidth: '420px',
-          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+          maxWidth: isSignUp ? '480px' : '420px',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease, max-width 0.3s ease',
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'translateY(-2px)'
@@ -205,6 +343,48 @@ export default function LoginPage() {
 
         {/* Form */}
         <form onSubmit={isSignUp ? handleSignUp : handleLogin} style={{ marginBottom: '32px' }}>
+          {isSignUp && (
+            <div style={{ marginBottom: '20px' }}>
+              <label style={{
+                display: 'block',
+                color: isDark ? '#e8f0ff' : '#1a2332',
+                fontSize: '14px',
+                fontWeight: 500,
+                marginBottom: '8px',
+              }}>
+                이름<span style={{ color: '#ea4335', marginLeft: '2px' }}>*</span>
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="홍길동"
+                required
+                style={{
+                  width: '100%',
+                  padding: '14px 16px',
+                  background: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                  border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+                  borderRadius: '8px',
+                  color: isDark ? '#e8f0ff' : '#1a2332',
+                  fontSize: '15px',
+                  transition: 'all 0.3s ease',
+                  outline: 'none',
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#5b9aff'
+                  e.currentTarget.style.background = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(91, 154, 255, 0.05)'
+                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(91, 154, 255, 0.1)'
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                  e.currentTarget.style.background = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)'
+                  e.currentTarget.style.boxShadow = 'none'
+                }}
+              />
+            </div>
+          )}
+
           <div style={{ marginBottom: '20px' }}>
             <label style={{
               display: 'block',
@@ -213,7 +393,7 @@ export default function LoginPage() {
               fontWeight: 500,
               marginBottom: '8px',
             }}>
-              이메일
+              이메일{isSignUp && <span style={{ color: '#ea4335', marginLeft: '2px' }}>*</span>}
             </label>
             <input
               type="email"
@@ -253,13 +433,13 @@ export default function LoginPage() {
               fontWeight: 500,
               marginBottom: '8px',
             }}>
-              비밀번호
+              비밀번호{isSignUp && <span style={{ color: '#ea4335', marginLeft: '2px' }}>*</span>}
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
+              placeholder={isSignUp ? '8자 이상 입력해주세요' : '••••••••'}
               required
               style={{
                 width: '100%',
@@ -283,6 +463,22 @@ export default function LoginPage() {
                 e.currentTarget.style.boxShadow = 'none'
               }}
             />
+            {isSignUp && (
+              <>
+                <div className={`password-strength ${password.length > 0 ? 'visible' : ''}`}>
+                  <div className={`password-strength-bar ${getPasswordStrengthClass()}`}></div>
+                </div>
+                <div style={{
+                  fontSize: '12px',
+                  color: isDark ? '#a0b4cc' : '#5a6c7d',
+                  marginTop: '6px',
+                  opacity: password.length > 0 ? 1 : 0,
+                  transition: 'opacity 0.3s ease',
+                }}>
+                  8자 이상, 영문/숫자/특수문자 포함 권장
+                </div>
+              </>
+            )}
           </div>
 
           {isSignUp && (
@@ -294,14 +490,21 @@ export default function LoginPage() {
                 fontWeight: 500,
                 marginBottom: '8px',
               }}>
-                비밀번호 확인
+                비밀번호 확인<span style={{ color: '#ea4335', marginLeft: '2px' }}>*</span>
               </label>
               <input
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="••••••••"
+                placeholder="비밀번호를 다시 입력해주세요"
                 required
+                className={
+                  confirmPassword.length > 0
+                    ? confirmPassword === password
+                      ? 'input-success'
+                      : 'input-error'
+                    : ''
+                }
                 style={{
                   width: '100%',
                   padding: '14px 16px',
@@ -319,11 +522,60 @@ export default function LoginPage() {
                   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(91, 154, 255, 0.1)'
                 }}
                 onBlur={(e) => {
-                  e.currentTarget.style.borderColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                  if (confirmPassword.length === 0) {
+                    e.currentTarget.style.borderColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                  }
                   e.currentTarget.style.background = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)'
                   e.currentTarget.style.boxShadow = 'none'
                 }}
               />
+            </div>
+          )}
+
+          {isSignUp && (
+            <div style={{ margin: '24px 0' }}>
+              <div className="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreeAll"
+                  checked={agreeAll}
+                  onChange={(e) => setAgreeAll(e.target.checked)}
+                />
+                <label htmlFor="agreeAll">전체 동의</label>
+              </div>
+              <div className="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreeTerms"
+                  checked={agreeTerms}
+                  onChange={(e) => setAgreeTerms(e.target.checked)}
+                  required
+                />
+                <label htmlFor="agreeTerms">
+                  <a href="#" onClick={(e) => e.preventDefault()}>이용약관</a> 동의 (필수)
+                </label>
+              </div>
+              <div className="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreePrivacy"
+                  checked={agreePrivacy}
+                  onChange={(e) => setAgreePrivacy(e.target.checked)}
+                  required
+                />
+                <label htmlFor="agreePrivacy">
+                  <a href="#" onClick={(e) => e.preventDefault()}>개인정보 처리방침</a> 동의 (필수)
+                </label>
+              </div>
+              <div className="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agreeMarketing"
+                  checked={agreeMarketing}
+                  onChange={(e) => setAgreeMarketing(e.target.checked)}
+                />
+                <label htmlFor="agreeMarketing">마케팅 정보 수신 동의 (선택)</label>
+              </div>
             </div>
           )}
 
@@ -453,7 +705,7 @@ export default function LoginPage() {
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
-            Google 계정으로 로그인
+            Google 계정으로 계속하기
           </button>
 
           <button
@@ -504,9 +756,14 @@ export default function LoginPage() {
               setIsSignUp(!isSignUp)
               setError('')
               setSuccess('')
+              setName('')
               setEmail('')
               setPassword('')
               setConfirmPassword('')
+              setAgreeAll(false)
+              setAgreeTerms(false)
+              setAgreePrivacy(false)
+              setAgreeMarketing(false)
             }}
             style={{
               background: 'none',
