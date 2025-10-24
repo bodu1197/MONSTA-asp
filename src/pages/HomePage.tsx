@@ -32,6 +32,11 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* TEST MARKER */}
+      <div className="w-full flex justify-center py-4 bg-red-500">
+        <div className="text-white font-bold" style={{ fontSize: '200px', lineHeight: '200px' }}>X</div>
+      </div>
+
       {/* Main Content - Feed */}
       <div className="w-full max-w-2xl mx-auto px-0">
         {/* Stories Section */}
