@@ -164,6 +164,7 @@ body {
 .main-content {
     margin-left: 240px;
     min-height: 100vh;
+    padding-top: 90px;
     transition: margin-left 0.3s ease;
 }
 
@@ -355,7 +356,7 @@ body {
     display: flex;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 32px;
+    padding: 0 32px 32px 32px;
     gap: 32px;
     justify-content: center;
 }
@@ -572,7 +573,7 @@ body {
     right: 50px;
     top: 90px;
     width: 320px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 120px);
     overflow-y: auto;
     z-index: 100;
     padding-bottom: 20px;
@@ -774,7 +775,7 @@ body {
     }
 
     .content-wrapper {
-        padding: 24px 16px;
+        padding: 0 16px 24px 16px;
     }
 }
 
@@ -789,6 +790,7 @@ body {
 
     .main-content {
         margin-left: 0;
+        padding-top: 84px;
     }
 
     .bottom-nav {
@@ -861,7 +863,7 @@ body {
     }
 
     .content-wrapper {
-        padding: 12px;
+        padding: 0 12px 12px 12px;
     }
 
     .post-card {
@@ -915,7 +917,7 @@ body {
 .profile-container {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 40px 32px;
+    padding: 0 32px 32px 32px;
 }
 
 .profile-header {
@@ -1258,7 +1260,7 @@ body {
 /* Profile Mobile Responsive */
 @media (max-width: 768px) {
     .profile-container {
-        padding: 24px 16px;
+        padding: 0 16px 24px 16px;
     }
 
     .profile-header {
