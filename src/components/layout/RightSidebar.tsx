@@ -5,34 +5,37 @@ const recommendedSellers: any[] = []
 
 export function RightSidebar() {
   return (
-    <aside className="right-sidebar">
-      <div className="suggestions-section">
+    <aside className="suggestions-section">
+      <div className="suggestions-card">
         <div className="suggestions-header">
           <h3>회원님을 위한 추천</h3>
-          <Link to="/discover">모두 보기</Link>
+          <Link to="/discover" style={{ color: 'var(--active-color)', fontSize: '14px', textDecoration: 'none', fontWeight: '600' }}>모두 보기</Link>
         </div>
 
-        <div className="suggestions-list">
-          {recommendedSellers.map((seller) => (
-            <div key={seller.id} className="suggestion-item">
-              <Link to={`/profile/${seller.name}`} className="suggestion-user">
-                <div className="suggestion-avatar">{seller.initials}</div>
-                <div className="suggestion-info">
-                  <div className="suggestion-name">{seller.name}</div>
-                  <div className="suggestion-subtitle">{seller.specialty}</div>
-                </div>
-              </Link>
-              <button className="follow-btn-small">팔로우</button>
+        {recommendedSellers.map((seller) => (
+          <div key={seller.id} className="suggestion-item">
+            <div className="suggestion-avatar">{seller.initials}</div>
+            <div className="suggestion-info">
+              <h4>{seller.name}</h4>
+              <p>{seller.specialty}</p>
             </div>
-          ))}
-        </div>
+            <button className="follow-btn">팔로우</button>
+          </div>
+        ))}
       </div>
 
-      <div className="footer-links">
-        <Link to="/about">소개</Link>
-        <Link to="/help">도움말</Link>
-        <Link to="/privacy">개인정보처리방침</Link>
-        <Link to="/terms">약관</Link>
+      <div className="footer">
+        <div className="footer-links">
+          <Link to="/about">소개</Link>
+          <Link to="/help">도움말</Link>
+          <Link to="/promotions">홍보 센터</Link>
+          <Link to="/api">API</Link>
+          <Link to="/jobs">채용 정보</Link>
+          <Link to="/privacy">개인정보처리방침</Link>
+          <Link to="/terms">약관</Link>
+          <Link to="/locations">위치</Link>
+          <Link to="/language">언어</Link>
+        </div>
         <p>© 2025 돌파구 from MONSTA</p>
       </div>
     </aside>

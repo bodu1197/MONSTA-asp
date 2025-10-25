@@ -14,9 +14,11 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <Sidebar />
       <main className="main-content">
-        {children}
+        <div className="content-wrapper">
+          {children}
+          <RightSidebar />
+        </div>
       </main>
-      <RightSidebar />
       <MobileNav />
     </>
   )
