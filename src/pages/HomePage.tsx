@@ -1,42 +1,16 @@
 import { Heart, MessageCircle, Send, Bookmark, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { supabase } from '../lib/supabase'
 import { Button } from '../components/ui/button'
 import { Card } from '../components/ui/card'
 import { Avatar, AvatarFallback } from '../components/ui/avatar'
-import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function HomePage() {
-  const handleLogout = async () => {
-    await supabase.auth.signOut()
-  }
-
   // TODO: 실제 데이터로 교체
   const stories: any[] = []
   const posts: any[] = []
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-[#0f3460] dark:text-blue-400">돌파구</h1>
-          <nav className="flex gap-6 items-center">
-            <Link to="/" className="font-semibold text-[#0f3460] dark:text-blue-400">홈</Link>
-            <Link to="/explore" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">탐색</Link>
-            <Link to="/categories" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">카테고리</Link>
-            <Link to="/profile" className="hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">프로필</Link>
-            <ThemeToggle />
-            <button onClick={handleLogout} className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">로그아웃</button>
-          </nav>
-        </div>
-      </header>
-
-      {/* TEST MARKER */}
-      <div className="w-full flex justify-center py-4 bg-red-500">
-        <div className="text-white font-bold" style={{ fontSize: '200px', lineHeight: '200px' }}>X</div>
-      </div>
-
+    <div className="w-full">
       {/* Main Content - Feed */}
       <div className="w-full max-w-2xl mx-auto px-0">
         {/* Stories Section */}

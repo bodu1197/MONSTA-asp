@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { Layout } from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import ExplorePage from './pages/ExplorePage'
@@ -41,11 +42,14 @@ function App() {
     <ThemeProvider>
       <BrowserRouter>
         <Routes>
+          {/* Routes without Layout */}
           <Route path="/login" element={user ? <Navigate to="/" /> : <LoginPage />} />
-          <Route path="/" element={user ? <HomePage /> : <Navigate to="/login" />} />
-          <Route path="/explore" element={<ExplorePage />} />
-          <Route path="/profile" element={user ? <ProfilePage /> : <Navigate to="/login" />} />
-          <Route path="/categories" element={<CategoriesPage />} />
+
+          {/* Routes with Layout */}
+          <Route path="/" element={<Layout><HomePage /></Layout>} />
+          <Route path="/explore" element={<Layout><ExplorePage /></Layout>} />
+          <Route path="/profile" element={<Layout>{user ? <ProfilePage /> : <Navigate to="/login" />}</Layout>} />
+          <Route path="/categories" element={<Layout><CategoriesPage /></Layout>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
