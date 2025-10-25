@@ -13,24 +13,36 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
   const handleToggle = async () => {
     if (updating) return
 
+    const previousType = userType
     const newType = userType === 'buyer' ? 'seller' : 'buyer'
 
+    // 즉시 UI 업데이트 (Optimistic Update)
+    setUserType(newType)
     setUpdating(true)
+
     try {
       const { data: { user } } = await supabase.auth.getUser()
 
-      if (!user) return
+      if (!user) {
+        console.error('No user found')
+        setUserType(previousType) // 원래대로 되돌림
+        return
+      }
 
       const { error } = await supabase
         .from('users')
         .update({ user_type: newType })
         .eq('id', user.id)
 
-      if (!error) {
-        setUserType(newType)
+      if (error) {
+        console.error('Supabase update error:', error)
+        setUserType(previousType) // 실패 시 원래대로 되돌림
+      } else {
+        console.log('User type updated successfully:', newType)
       }
     } catch (error) {
       console.error('Failed to update user type:', error)
+      setUserType(previousType) // 에러 시 원래대로 되돌림
     } finally {
       setUpdating(false)
     }
