@@ -8,15 +8,15 @@ import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 const categories = [
-  { name: 'IT/프로그래밍', href: '/category/it-programming', icon: Code },
   { name: 'AI 서비스', href: '/category/ai-services', icon: Bot },
+  { name: '생활 서비스', href: '/category/life-service', icon: Home },
+  { name: '심부름', href: '/category/errands', icon: Bike },
+  { name: 'IT/프로그래밍', href: '/category/it-programming', icon: Code },
   { name: '디자인', href: '/category/design', icon: Palette },
   { name: '마케팅', href: '/category/marketing', icon: Megaphone },
-  { name: '생활 서비스', href: '/category/life-service', icon: Home },
   { name: '영상/사진', href: '/category/video-photo', icon: Camera },
   { name: '문서/글쓰기', href: '/category/writing', icon: Pen },
   { name: '비즈니스', href: '/category/business', icon: Briefcase },
-  { name: '심부름', href: '/category/errands', icon: Bike },
   { name: '번역/통역', href: '/category/translation', icon: Languages },
   { name: '음악/오디오', href: '/category/music-audio', icon: Music },
   { name: '직무역량', href: '/category/job-skills', icon: TrendingUp },
