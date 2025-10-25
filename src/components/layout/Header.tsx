@@ -1,4 +1,4 @@
-import { Search } from 'lucide-react'
+import { Search, Heart, Bell } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { supabase } from '@/lib/supabase'
@@ -34,6 +34,16 @@ export function Header() {
 
       <div className="header-actions">
         <ThemeToggle />
+
+        <button className="icon-btn">
+          <Heart style={{ width: '22px', height: '22px' }} />
+        </button>
+
+        <button className="icon-btn">
+          <Bell style={{ width: '22px', height: '22px' }} />
+          <span className="badge">3</span>
+        </button>
+
         {user ? (
           <Link to="/profile" className="user-avatar">
             {user.email?.charAt(0).toUpperCase()}

@@ -357,11 +357,12 @@ body {
     margin: 0 auto;
     padding: 32px;
     gap: 32px;
+    justify-content: center;
 }
 
 .feed-section {
     flex: 1;
-    max-width: 600px;
+    max-width: 470px;
 }
 
 /* 스토리 섹션 */
@@ -792,10 +793,6 @@ body {
     .login-btn {
         padding: 6px 16px;
         font-size: 13px;
-    }
-
-    .header-actions .icon-btn:not(.theme-toggle) {
-        display: none;
     }
 
     .content-wrapper {
