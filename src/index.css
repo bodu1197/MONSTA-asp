@@ -1059,8 +1059,7 @@ body {
 
 .activity-mode-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -1083,7 +1082,14 @@ body {
     padding: 16px 24px;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 200px;
 }
 
 .mode-toggle-btn:hover {

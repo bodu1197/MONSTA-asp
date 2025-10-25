@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
-import { ShoppingBag, Building2, ArrowLeftRight } from 'lucide-react'
+import { ShoppingBag, Building2 } from 'lucide-react'
 
 interface UserTypeToggleProps {
   currentType?: 'buyer' | 'seller'
@@ -49,39 +49,17 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
           onClick={handleToggle}
           disabled={updating}
         >
-          <div className="mode-toggle-content">
-            <div className="mode-current">
-              {userType === 'buyer' ? (
-                <>
-                  <ShoppingBag className="mode-icon-small" />
-                  <span>구매자 모드</span>
-                </>
-              ) : (
-                <>
-                  <Building2 className="mode-icon-small" />
-                  <span>판매자 모드</span>
-                </>
-              )}
-            </div>
-
-            <div className="mode-switch-icon">
-              <ArrowLeftRight className="switch-icon" />
-            </div>
-
-            <div className="mode-next">
-              {userType === 'buyer' ? (
-                <>
-                  <Building2 className="mode-icon-small" />
-                  <span>판매자로 전환</span>
-                </>
-              ) : (
-                <>
-                  <ShoppingBag className="mode-icon-small" />
-                  <span>구매자로 전환</span>
-                </>
-              )}
-            </div>
-          </div>
+          {userType === 'buyer' ? (
+            <>
+              <ShoppingBag className="mode-icon-small" />
+              <span>구매자</span>
+            </>
+          ) : (
+            <>
+              <Building2 className="mode-icon-small" />
+              <span>판매자</span>
+            </>
+          )}
         </button>
       </div>
     </div>
