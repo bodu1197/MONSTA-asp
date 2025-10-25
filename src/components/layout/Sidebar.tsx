@@ -1,5 +1,6 @@
-import { Home, Search, Compass, Play, MessageCircle, Bell, PlusSquare, User, Briefcase } from 'lucide-react'
+import { Home, Search, Compass, Play, MessageCircle, Bell, PlusSquare, User, Briefcase, Menu } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
 
 const navigation = [
   { name: '홈', href: '/', icon: Home },
@@ -13,8 +14,17 @@ const navigation = [
   { name: '카테고리', href: '/categories', icon: Briefcase },
 ]
 
+const moreLinks = [
+  { name: '서비스 소개', href: '/about' },
+  { name: '이용약관', href: '/terms' },
+  { name: '개인정보처리방침', href: '/privacy' },
+  { name: '고객센터', href: '/support' },
+  { name: '공지사항', href: '/announcements' },
+]
+
 export function Sidebar() {
   const location = useLocation()
+  const [showMoreMenu, setShowMoreMenu] = useState(false)
 
   return (
     <aside className="sidebar">
@@ -49,6 +59,35 @@ export function Sidebar() {
             </Link>
           )
         })()}
+
+        <div style={{ marginTop: 'auto' }}>
+          <button
+            onClick={() => setShowMoreMenu(!showMoreMenu)}
+            className="nav-item"
+            style={{ width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}
+          >
+            <Menu style={{ width: '24px', height: '24px' }} />
+            <span>더보기</span>
+          </button>
+
+          {showMoreMenu && (
+            <div className="more-menu">
+              {moreLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="more-menu-item"
+                  onClick={() => setShowMoreMenu(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="more-menu-footer">
+                © 2025 돌파구
+              </div>
+            </div>
+          )}
+        </div>
       </nav>
     </aside>
   )
