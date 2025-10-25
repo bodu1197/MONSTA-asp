@@ -7,10 +7,6 @@ import {
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
-const mainNavigation = [
-  // 홈 메뉴 제거 - 로고가 홈 역할
-]
-
 const categories = [
   { name: 'IT/프로그래밍', href: '/category/it-programming', icon: Code },
   { name: 'AI 서비스', href: '/category/ai-services', icon: Bot },
