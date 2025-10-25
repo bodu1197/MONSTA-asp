@@ -13,10 +13,10 @@ export function Layout({ children }: LayoutProps) {
     <>
       <Header />
       <Sidebar />
+      <RightSidebar />
       <main className="main-content">
         <div className="content-wrapper">
           {children}
-          <RightSidebar />
         </div>
       </main>
       <MobileNav />
