@@ -19,17 +19,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light')
 
   useEffect(() => {
-    const root = window.document.documentElement
-
-    // Remove both classes first
-    root.classList.remove('light', 'dark')
+    const body = window.document.body
 
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      root.classList.add(systemTheme)
+      body.setAttribute('data-theme', systemTheme)
       setActualTheme(systemTheme)
     } else {
-      root.classList.add(theme)
+      body.setAttribute('data-theme', theme)
       setActualTheme(theme)
     }
   }, [theme])
@@ -41,9 +38,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const handleChange = () => {
       if (theme === 'system') {
         const systemTheme = mediaQuery.matches ? 'dark' : 'light'
-        const root = window.document.documentElement
-        root.classList.remove('light', 'dark')
-        root.classList.add(systemTheme)
+        const body = window.document.body
+        body.setAttribute('data-theme', systemTheme)
         setActualTheme(systemTheme)
       }
     }

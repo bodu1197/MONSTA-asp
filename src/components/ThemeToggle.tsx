@@ -1,31 +1,20 @@
-import { Moon, Sun, Monitor } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
-import { Button } from './ui/button'
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { actualTheme, setTheme } = useTheme()
 
-  const cycleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark')
-    } else if (theme === 'dark') {
-      setTheme('system')
-    } else {
-      setTheme('light')
-    }
+  const toggleTheme = () => {
+    setTheme(actualTheme === 'light' ? 'dark' : 'light')
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={cycleTheme}
-      className="relative"
-      title={`현재 테마: ${theme === 'light' ? '라이트' : theme === 'dark' ? '다크' : '시스템'}`}
+    <button
+      onClick={toggleTheme}
+      className="theme-toggle"
+      title={`현재 테마: ${actualTheme === 'light' ? '라이트' : '다크'}`}
     >
-      {theme === 'light' && <Sun className="h-5 w-5" />}
-      {theme === 'dark' && <Moon className="h-5 w-5" />}
-      {theme === 'system' && <Monitor className="h-5 w-5" />}
-    </Button>
+      {actualTheme === 'light' ? <Moon style={{ width: '20px', height: '20px' }} /> : <Sun style={{ width: '20px', height: '20px' }} />}
+    </button>
   )
 }

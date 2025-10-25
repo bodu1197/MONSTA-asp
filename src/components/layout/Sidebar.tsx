@@ -1,15 +1,5 @@
-import { Home, Search, Compass, Play, MessageCircle, Bell, PlusSquare, User, Briefcase, Menu, Loader2 } from 'lucide-react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useState, useTransition } from 'react'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+import { Home, Search, Compass, Play, MessageCircle, Bell, PlusSquare, User, Briefcase } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 
 const navigation = [
   { name: '홈', href: '/', icon: Home },
@@ -23,83 +13,42 @@ const navigation = [
   { name: '카테고리', href: '/categories', icon: Briefcase },
 ]
 
-const moreLinks = [
-  { name: '서비스 소개', href: '/about' },
-  { name: '이용약관', href: '/terms' },
-  { name: '개인정보처리방침', href: '/privacy' },
-  { name: '고객센터', href: '/support' },
-  { name: '공지사항', href: '/announcements' },
-]
-
 export function Sidebar() {
   const location = useLocation()
-  const navigate = useNavigate()
-  const [isPending, startTransition] = useTransition()
-  const [loadingPath, setLoadingPath] = useState<string | null>(null)
-
-  const handleNavigation = (href: string) => {
-    if (location.pathname === href || isPending) return
-
-    setLoadingPath(href)
-    startTransition(() => {
-      navigate(href)
-    })
-  }
 
   return (
-    <aside className="hidden lg:flex fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 flex-col border-r bg-background dark:bg-gray-800 dark:border-gray-700 overflow-y-auto">
-      <nav className="flex flex-1 flex-col gap-2 p-4">
-        {navigation.map((item) => {
+    <aside className="sidebar">
+      <div className="logo-section">
+        <h1>돌파구</h1>
+      </div>
+      <nav className="nav-menu">
+        {navigation.slice(0, -1).map((item) => {
           const isActive = location.pathname === item.href
-          const isLoading = loadingPath === item.href && isPending
           return (
-            <Button
+            <Link
               key={item.name}
-              variant={isActive ? 'secondary' : 'ghost'}
-              className={cn(
-                'w-full justify-start gap-3 text-base h-12',
-                isActive && 'bg-secondary font-semibold'
-              )}
-              onClick={() => handleNavigation(item.href)}
-              disabled={isPending}
+              to={item.href}
+              className={`nav-item ${isActive ? 'active' : ''}`}
             >
-              {isLoading ? (
-                <Loader2 style={{ width: '24px', height: '24px' }} className="animate-spin" />
-              ) : (
-                <item.icon style={{ width: '24px', height: '24px' }} />
-              )}
-              {item.name}
-            </Button>
+              <item.icon style={{ width: '24px', height: '24px' }} />
+              <span>{item.name}</span>
+            </Link>
           )
         })}
-
-        {/* 더보기 메뉴 */}
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              className="w-full justify-start gap-3 text-base h-12 mt-auto"
+        <div className="nav-divider"></div>
+        {(() => {
+          const categoryItem = navigation[8]
+          const CategoryIcon = categoryItem.icon
+          return (
+            <Link
+              to={categoryItem.href}
+              className={`nav-item ${location.pathname === categoryItem.href ? 'active' : ''}`}
             >
-              <Menu style={{ width: '24px', height: '24px' }} />
-              더보기
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="w-56">
-            {moreLinks.map((link) => (
-              <DropdownMenuItem key={link.name} asChild>
-                <Link to={link.href} className="cursor-pointer">
-                  {link.name}
-                </Link>
-              </DropdownMenuItem>
-            ))}
-            <DropdownMenuSeparator />
-            <DropdownMenuItem disabled>
-              <span className="text-xs text-muted-foreground">
-                © 2025 돌파구
-              </span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+              <CategoryIcon style={{ width: '24px', height: '24px' }} />
+              <span>{categoryItem.name}</span>
+            </Link>
+          )
+        })()}
       </nav>
     </aside>
   )
