@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 const mainNavigation = [
-  { name: '홈', href: '/', icon: Home },
+  // 홈 메뉴 제거 - 로고가 홈 역할
 ]
 
 const categories = [
@@ -56,26 +56,10 @@ export function Sidebar() {
 
   return (
     <aside className="sidebar">
-      <div className="logo-section">
-        <h1>돌파구</h1>
-      </div>
+      <Link to="/" className="logo-section">
+        <Home style={{ width: '28px', height: '28px' }} />
+      </Link>
       <nav className="nav-menu">
-        {/* 메인 네비게이션 */}
-        {mainNavigation.map((item) => {
-          const isActive = location.pathname === item.href
-          return (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`nav-item ${isActive ? 'active' : ''}`}
-            >
-              <item.icon style={{ width: '24px', height: '24px' }} />
-              <span>{item.name}</span>
-            </Link>
-          )
-        })}
-
-        <div className="nav-divider"></div>
 
         {/* 카테고리 메뉴 */}
         {categories.map((item) => {

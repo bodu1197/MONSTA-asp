@@ -64,16 +64,20 @@ body {
 }
 
 .logo-section {
-    padding: 8px 12px;
+    padding: 12px;
     margin-bottom: 20px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--active-color);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.logo-section h1 {
-    color: var(--active-color);
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.logo-section:hover {
+    background: var(--hover-bg);
 }
 
 .nav-menu {
