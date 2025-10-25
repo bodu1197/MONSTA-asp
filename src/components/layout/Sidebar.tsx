@@ -54,6 +54,7 @@ export function Sidebar() {
     <aside className="sidebar">
       <Link to="/" className="logo-section">
         <Home style={{ width: '28px', height: '28px' }} />
+        <span>돌파구</span>
       </Link>
       <nav className="nav-menu">
 

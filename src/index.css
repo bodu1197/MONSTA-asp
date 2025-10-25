@@ -70,10 +70,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     color: var(--active-color);
     border-radius: 12px;
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.logo-section span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .logo-section:hover {
