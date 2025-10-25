@@ -1,11 +1,6 @@
-import { Settings, Star, Briefcase } from 'lucide-react'
+import { Settings, Star, Calendar, Image, Briefcase } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { UserTypeToggle } from '@/components/profile/UserTypeToggle'
 import { supabase } from '@/lib/supabase'
 import type { User, Post } from '@/types/database'
@@ -18,6 +13,7 @@ export default function ProfilePage() {
   const [followerCount, setFollowerCount] = useState(0)
   const [followingCount, setFollowingCount] = useState(0)
   const [reviews, setReviews] = useState<any[]>([])
+  const [activeTab, setActiveTab] = useState('portfolio')
 
   useEffect(() => {
     async function loadProfile() {
@@ -100,9 +96,9 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="w-full max-w-5xl mx-auto px-4 py-8">
-        <div className="text-center py-12 text-muted-foreground">
-          로딩 중...
+      <div className="profile-container">
+        <div className="empty-state">
+          <div className="empty-title">로딩 중...</div>
         </div>
       </div>
     )
@@ -115,7 +111,7 @@ export default function ProfilePage() {
   const averageRating =
     reviews && reviews.length > 0
       ? reviews.reduce((sum: number, r: any) => sum + r.rating, 0) / reviews.length
-      : 0
+      : 5.0
 
   const initials = user.username?.charAt(0)?.toUpperCase() || user.email?.charAt(0)?.toUpperCase() || 'U'
   const joinedDate = new Date(user.created_at).toLocaleDateString('ko-KR', {
@@ -123,207 +119,126 @@ export default function ProfilePage() {
     month: 'long',
   })
 
-  return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-8">
-      {/* Profile Header */}
-      <Card className="p-8 mb-6">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Avatar */}
-          <div className="flex flex-col items-center md:items-start">
-            <Avatar className="w-32 h-32 mb-4">
-              <AvatarFallback className="bg-primary/10 text-primary font-bold text-4xl">
-                {initials}
-              </AvatarFallback>
-            </Avatar>
-
-            {/* Stats - Mobile */}
-            <div className="flex gap-6 md:hidden mb-4">
-              <div className="text-center">
-                <div className="font-bold text-xl">{posts?.length || 0}</div>
-                <div className="text-xs text-muted-foreground">포스트</div>
-              </div>
-              <div className="text-center">
-                <div className="font-bold text-xl">{followerCount || 0}</div>
-                <div className="text-xs text-muted-foreground">팔로워</div>
-              </div>
-              <div className="text-center">
-                <div className="font-bold text-xl">{followingCount || 0}</div>
-                <div className="text-xs text-muted-foreground">팔로잉</div>
-              </div>
+  const getTabContent = () => {
+    switch (activeTab) {
+      case 'portfolio':
+        return (
+          <div className="empty-state">
+            <div className="empty-icon">
+              <Image />
             </div>
+            <h3 className="empty-title">아직 포트폴리오가 없습니다.</h3>
+            <p className="empty-desc">첫 번째 작품을 업로드해 보세요!</p>
+          </div>
+        )
+      case 'services':
+        return (
+          <div className="empty-state">
+            <div className="empty-icon">
+              <Briefcase />
+            </div>
+            <h3 className="empty-title">등록된 서비스가 없습니다.</h3>
+            <p className="empty-desc">첫 번째 서비스를 등록해 보세요!</p>
+          </div>
+        )
+      case 'reviews':
+        return (
+          <div className="empty-state">
+            <div className="empty-icon">
+              <Star />
+            </div>
+            <h3 className="empty-title">아직 리뷰가 없습니다.</h3>
+            <p className="empty-desc">첫 번째 리뷰를 받아 보세요!</p>
+          </div>
+        )
+      default:
+        return null
+    }
+  }
+
+  return (
+    <div className="profile-container">
+      {/* Profile Header */}
+      <div className="profile-header">
+        <div className="profile-top">
+          {/* Avatar */}
+          <div className="profile-avatar-section">
+            <div className="profile-avatar">{initials}</div>
+            <Link to="/profile/edit" className="settings-btn">
+              <Settings />
+            </Link>
           </div>
 
           {/* Profile Info */}
-          <div className="flex-1">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <h1 className="text-2xl font-bold">{user.username}</h1>
-                  {user.is_verified && (
-                    <Badge className="bg-primary text-white">인증</Badge>
-                  )}
-                </div>
-                {user.full_name && (
-                  <p className="text-muted-foreground">{user.full_name}</p>
-                )}
+          <div className="profile-info">
+            <div className="profile-stats">
+              <div className="stat-item">
+                <span className="stat-value">{posts?.length || 0}</span>
+                <span className="stat-label">포스트</span>
               </div>
-              <Link to="/profile/edit">
-                <Button variant="outline" size="icon">
-                  <Settings className="h-4 w-4" />
-                </Button>
+              <div className="stat-item">
+                <span className="stat-value">{followerCount || 0}</span>
+                <span className="stat-label">팔로워</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">{followingCount || 0}</span>
+                <span className="stat-label">팔로잉</span>
+              </div>
+            </div>
+
+            <div className="profile-meta">
+              <Calendar style={{ width: '16px', height: '16px' }} />
+              <span>가입일: {joinedDate}</span>
+            </div>
+
+            <div className="profile-actions">
+              <Link to="/profile/edit" className="btn-primary">
+                프로필 편집
               </Link>
             </div>
+          </div>
 
-            {/* Stats - Desktop */}
-            <div className="hidden md:flex gap-6 mb-4">
-              <div>
-                <span className="font-bold">{posts?.length || 0}</span>{' '}
-                <span className="text-muted-foreground">포스트</span>
-              </div>
-              <div>
-                <span className="font-bold">{followerCount || 0}</span>{' '}
-                <span className="text-muted-foreground">팔로워</span>
-              </div>
-              <div>
-                <span className="font-bold">{followingCount || 0}</span>{' '}
-                <span className="text-muted-foreground">팔로잉</span>
-              </div>
-              {reviews && reviews.length > 0 && (
-                <div className="flex items-center gap-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold">{averageRating.toFixed(1)}</span>{' '}
-                  <span className="text-muted-foreground">({reviews.length})</span>
-                </div>
-              )}
-            </div>
-
-            {/* Bio */}
-            {user.bio && <p className="mb-4">{user.bio}</p>}
-
-            {/* Meta Info */}
-            <div className="space-y-2 mb-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Briefcase className="h-4 w-4" />
-                가입일: {joinedDate}
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex gap-2">
-              <Link to="/profile/edit" className="flex-1">
-                <Button className="w-full">프로필 편집</Button>
-              </Link>
+          {/* Profile Right */}
+          <div className="profile-right">
+            <p className="joined-date">회원님을 위한 추천</p>
+            <div className="recommended-badge">
+              <Star style={{ width: '16px', height: '16px', fill: 'currentColor' }} />
+              {averageRating.toFixed(1)}점 보기
             </div>
           </div>
         </div>
-      </Card>
-
-      {/* User Type Toggle */}
-      <div className="mb-6">
-        <UserTypeToggle currentType={user.user_type} />
       </div>
 
+      {/* User Type Toggle */}
+      <UserTypeToggle currentType={user.user_type} />
+
       {/* Content Tabs */}
-      <Tabs defaultValue="portfolio" className="w-full">
-        <TabsList className="w-full grid grid-cols-3">
-          <TabsTrigger value="portfolio">포트폴리오</TabsTrigger>
-          <TabsTrigger value="services">서비스</TabsTrigger>
-          <TabsTrigger value="reviews">리뷰</TabsTrigger>
-        </TabsList>
+      <div className="tabs-container">
+        <div className="tabs-nav">
+          <button
+            className={`tab-btn ${activeTab === 'portfolio' ? 'active' : ''}`}
+            onClick={() => setActiveTab('portfolio')}
+          >
+            포트폴리오
+          </button>
+          <button
+            className={`tab-btn ${activeTab === 'services' ? 'active' : ''}`}
+            onClick={() => setActiveTab('services')}
+          >
+            서비스
+          </button>
+          <button
+            className={`tab-btn ${activeTab === 'reviews' ? 'active' : ''}`}
+            onClick={() => setActiveTab('reviews')}
+          >
+            리뷰
+          </button>
+        </div>
 
-        {/* Portfolio Tab */}
-        <TabsContent value="portfolio" className="mt-6">
-          {posts && posts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {posts.map((post: Post) => (
-                <Link key={post.id} to={`/post/${post.id}`}>
-                  <Card className="overflow-hidden hover:shadow-lg transition cursor-pointer border-2 hover:border-primary group">
-                    <div className="relative aspect-square bg-muted">
-                      {post.media_urls && post.media_urls[0] && (
-                        <img
-                          src={post.media_urls[0]}
-                          alt={post.title || 'Portfolio item'}
-                          className="w-full h-full object-cover group-hover:scale-105 transition"
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition" />
-                    </div>
-                    <div className="p-3">
-                      <h3 className="font-semibold text-sm mb-1 group-hover:text-primary transition">
-                        {post.title || '제목 없음'}
-                      </h3>
-                      <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                        <span>좋아요 {post.like_count}</span>
-                        <span>조회 {post.view_count.toLocaleString()}</span>
-                      </div>
-                    </div>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12 text-muted-foreground">
-              아직 포트폴리오가 없습니다.
-            </div>
-          )}
-        </TabsContent>
-
-        {/* Services Tab */}
-        <TabsContent value="services" className="mt-6">
-          <div className="text-center py-12 text-muted-foreground">
-            제공 중인 서비스 목록이 여기에 표시됩니다.
-          </div>
-        </TabsContent>
-
-        {/* Reviews Tab */}
-        <TabsContent value="reviews" className="mt-6">
-          {reviews && reviews.length > 0 ? (
-            <div className="space-y-4">
-              {reviews.map((review: any) => (
-                <Card key={review.id} className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="w-12 h-12">
-                      <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                        {review.reviewer?.username?.charAt(0)?.toUpperCase() || 'U'}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <div className="font-semibold">{review.reviewer?.username || '익명'}</div>
-                          <div className="text-sm text-muted-foreground">
-                            {review.order?.title || '서비스'}
-                          </div>
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {new Date(review.created_at).toLocaleDateString('ko-KR')}
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1 mb-2">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-4 w-4 ${
-                              i < review.rating
-                                ? 'fill-yellow-400 text-yellow-400'
-                                : 'text-muted-foreground'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      {review.content && <p className="text-sm">{review.content}</p>}
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12 text-muted-foreground">
-              아직 리뷰가 없습니다.
-            </div>
-          )}
-        </TabsContent>
-      </Tabs>
+        <div className="tab-content">
+          {getTabContent()}
+        </div>
+      </div>
     </div>
   )
 }

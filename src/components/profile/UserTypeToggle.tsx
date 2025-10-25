@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import { supabase } from '@/lib/supabase'
-import { ShoppingBag, User } from 'lucide-react'
+import { ShoppingBag, Building2 } from 'lucide-react'
 
 interface UserTypeToggleProps {
   currentType?: 'buyer' | 'seller'
@@ -37,35 +35,33 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
   }
 
   return (
-    <Card className="p-4">
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex-1">
-          <h3 className="font-semibold mb-1">사용자 유형</h3>
-          <p className="text-sm text-muted-foreground">
-            {userType === 'buyer' ? '구매자로 활동 중입니다' : '판매자로 활동 중입니다'}
-          </p>
+    <div className="activity-mode">
+      <h2 className="activity-mode-title">활동 모드</h2>
+      <p className="activity-mode-subtitle">구매자와 판매자 모드를 자유롭게 전환할 수 있습니다.</p>
+
+      <div className="mode-toggle">
+        <div
+          className={`mode-card ${userType === 'buyer' ? 'active' : ''}`}
+          onClick={() => handleToggle('buyer')}
+        >
+          <div className="mode-icon">
+            <ShoppingBag />
+          </div>
+          <div className="mode-title">구매자</div>
+          <div className="mode-desc">서비스·구매</div>
         </div>
-        <div className="flex gap-2">
-          <Button
-            variant={userType === 'buyer' ? 'default' : 'outline'}
-            size="sm"
-            onClick={() => handleToggle('buyer')}
-            disabled={updating}
-          >
-            <User className="h-4 w-4 mr-2" />
-            구매자
-          </Button>
-          <Button
-            variant={userType === 'seller' ? 'default' : 'outline'}
-            size="sm"
-            onClick={() => handleToggle('seller')}
-            disabled={updating}
-          >
-            <ShoppingBag className="h-4 w-4 mr-2" />
-            판매자
-          </Button>
+
+        <div
+          className={`mode-card ${userType === 'seller' ? 'active' : ''}`}
+          onClick={() => handleToggle('seller')}
+        >
+          <div className="mode-icon">
+            <Building2 />
+          </div>
+          <div className="mode-title">판매자</div>
+          <div className="mode-desc">서비스·판매</div>
         </div>
       </div>
-    </Card>
+    </div>
   )
 }
