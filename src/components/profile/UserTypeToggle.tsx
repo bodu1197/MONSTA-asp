@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
-import { ShoppingBag, Building2 } from 'lucide-react'
+import { ShoppingBag, Building2, ArrowLeftRight } from 'lucide-react'
 
 interface UserTypeToggleProps {
   currentType?: 'buyer' | 'seller'
@@ -10,8 +10,10 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
   const [userType, setUserType] = useState<'buyer' | 'seller'>(currentType)
   const [updating, setUpdating] = useState(false)
 
-  const handleToggle = async (type: 'buyer' | 'seller') => {
-    if (type === userType || updating) return
+  const handleToggle = async () => {
+    if (updating) return
+
+    const newType = userType === 'buyer' ? 'seller' : 'buyer'
 
     setUpdating(true)
     try {
@@ -21,11 +23,11 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
 
       const { error } = await supabase
         .from('users')
-        .update({ user_type: type })
+        .update({ user_type: newType })
         .eq('id', user.id)
 
       if (!error) {
-        setUserType(type)
+        setUserType(newType)
       }
     } catch (error) {
       console.error('Failed to update user type:', error)
@@ -36,31 +38,51 @@ export function UserTypeToggle({ currentType = 'buyer' }: UserTypeToggleProps) {
 
   return (
     <div className="activity-mode">
-      <h2 className="activity-mode-title">활동 모드</h2>
-      <p className="activity-mode-subtitle">구매자와 판매자 모드를 자유롭게 전환할 수 있습니다.</p>
-
-      <div className="mode-toggle">
-        <div
-          className={`mode-card ${userType === 'buyer' ? 'active' : ''}`}
-          onClick={() => handleToggle('buyer')}
-        >
-          <div className="mode-icon">
-            <ShoppingBag />
-          </div>
-          <div className="mode-title">구매자</div>
-          <div className="mode-desc">서비스·구매</div>
+      <div className="activity-mode-header">
+        <div>
+          <h2 className="activity-mode-title">활동 모드</h2>
+          <p className="activity-mode-subtitle">구매자와 판매자 모드를 자유롭게 전환할 수 있습니다.</p>
         </div>
 
-        <div
-          className={`mode-card ${userType === 'seller' ? 'active' : ''}`}
-          onClick={() => handleToggle('seller')}
+        <button
+          className="mode-toggle-btn"
+          onClick={handleToggle}
+          disabled={updating}
         >
-          <div className="mode-icon">
-            <Building2 />
+          <div className="mode-toggle-content">
+            <div className="mode-current">
+              {userType === 'buyer' ? (
+                <>
+                  <ShoppingBag className="mode-icon-small" />
+                  <span>구매자 모드</span>
+                </>
+              ) : (
+                <>
+                  <Building2 className="mode-icon-small" />
+                  <span>판매자 모드</span>
+                </>
+              )}
+            </div>
+
+            <div className="mode-switch-icon">
+              <ArrowLeftRight className="switch-icon" />
+            </div>
+
+            <div className="mode-next">
+              {userType === 'buyer' ? (
+                <>
+                  <Building2 className="mode-icon-small" />
+                  <span>판매자로 전환</span>
+                </>
+              ) : (
+                <>
+                  <ShoppingBag className="mode-icon-small" />
+                  <span>구매자로 전환</span>
+                </>
+              )}
+            </div>
           </div>
-          <div className="mode-title">판매자</div>
-          <div className="mode-desc">서비스·판매</div>
-        </div>
+        </button>
       </div>
     </div>
   )
