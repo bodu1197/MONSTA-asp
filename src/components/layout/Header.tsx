@@ -22,32 +22,27 @@ export function Header() {
 
   return (
     <header className="header">
-      <div className="header-content">
-        <Link to="/" className="logo">
-          <h1>돌파구</h1>
-        </Link>
+      <Link to="/" className="logo">돌파구</Link>
 
-        <div className="search-container">
-          <Search style={{ width: '20px', height: '20px' }} className="search-icon" />
-          <input
-            type="search"
-            placeholder="검색..."
-            className="search-bar"
-          />
-        </div>
+      <div className="search-bar">
+        <Search className="search-icon" style={{ width: '18px', height: '18px' }} />
+        <input
+          type="search"
+          placeholder="검색..."
+        />
+      </div>
 
-        <div className="header-actions">
-          <ThemeToggle />
-          {user ? (
-            <Link to="/profile" className="user-avatar">
-              {user.email?.charAt(0).toUpperCase()}
-            </Link>
-          ) : (
-            <Link to="/login" className="login-btn">
-              로그인
-            </Link>
-          )}
-        </div>
+      <div className="header-actions">
+        <ThemeToggle />
+        {user ? (
+          <Link to="/profile" className="user-avatar">
+            {user.email?.charAt(0).toUpperCase()}
+          </Link>
+        ) : (
+          <Link to="/login" className="login-btn">
+            로그인
+          </Link>
+        )}
       </div>
     </header>
   )
