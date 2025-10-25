@@ -7,7 +7,6 @@ import type { User, Post } from '@/types/database'
 
 export default function ProfilePage() {
   const navigate = useNavigate()
-  const [loading, setLoading] = useState(true)
   const [user, setUser] = useState<User | null>(null)
   const [posts, setPosts] = useState<Post[]>([])
   const [followerCount, setFollowerCount] = useState(0)
@@ -16,94 +15,87 @@ export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState('portfolio')
 
   useEffect(() => {
-    async function loadProfile() {
-      // Get current user
-      const {
-        data: { user: authUser },
-      } = await supabase.auth.getUser()
+    // 1️⃣ 즉시 사용자 정보만 로드 (가장 중요)
+    async function loadUserInfo() {
+      const { data: { user: authUser } } = await supabase.auth.getUser()
 
       if (!authUser) {
         navigate('/login')
         return
       }
 
-      // Get user profile
+      // 기본 사용자 정보 먼저 설정 (즉시 UI 표시)
+      const defaultUser: User = {
+        id: authUser.id,
+        email: authUser.email!,
+        username: authUser.email?.split('@')[0],
+        created_at: authUser.created_at!,
+      }
+      setUser(defaultUser)
+
+      // DB에서 전체 프로필 조회 (있으면 업데이트)
       const { data: userData } = await supabase
         .from('users')
         .select('*')
         .eq('id', authUser.id)
         .single()
 
-      if (!userData) {
-        // Create default user data if profile doesn't exist
-        setUser({
-          id: authUser.id,
-          email: authUser.email!,
-          username: authUser.email?.split('@')[0],
-          created_at: authUser.created_at!,
-        })
-        setLoading(false)
-        return
+      if (userData) {
+        setUser(userData as User)
       }
 
-      setUser(userData as User)
-
-      // Fetch all data in parallel for better performance
-      const [
-        { data: postsData },
-        { count: followers },
-        { count: following },
-        { data: reviewsData }
-      ] = await Promise.all([
-        supabase
-          .from('posts')
-          .select('*')
-          .eq('user_id', userData.id)
-          .eq('is_portfolio', true)
-          .order('created_at', { ascending: false }),
-
-        supabase
-          .from('follows')
-          .select('*', { count: 'exact', head: true })
-          .eq('following_id', userData.id),
-
-        supabase
-          .from('follows')
-          .select('*', { count: 'exact', head: true })
-          .eq('follower_id', userData.id),
-
-        supabase
-          .from('reviews')
-          .select(`
-            *,
-            reviewer:reviewer_id(username),
-            order:order_id(title)
-          `)
-          .eq('reviewee_id', userData.id)
-          .eq('is_public', true)
-          .order('created_at', { ascending: false })
-      ])
-
-      setPosts(postsData || [])
-      setFollowerCount(followers || 0)
-      setFollowingCount(following || 0)
-      setReviews(reviewsData || [])
-      setLoading(false)
+      // 2️⃣ 백그라운드에서 통계 데이터 로드 (UI는 이미 표시됨)
+      loadStatistics(authUser.id)
     }
 
-    loadProfile()
+    loadUserInfo()
   }, [navigate])
 
-  if (loading) {
-    return (
-      <div className="profile-container">
-        <div className="empty-state">
-          <div className="empty-title">로딩 중...</div>
-        </div>
-      </div>
-    )
+  // 통계 데이터는 별도로 비동기 로드 (UI 블로킹 없음)
+  async function loadStatistics(userId: string) {
+    // 각 데이터를 독립적으로 로드 (하나가 느려도 다른 건 표시됨)
+    supabase
+      .from('posts')
+      .select('*')
+      .eq('user_id', userId)
+      .eq('is_portfolio', true)
+      .order('created_at', { ascending: false })
+      .then(({ data }) => {
+        if (data) setPosts(data)
+      })
+
+    supabase
+      .from('follows')
+      .select('*', { count: 'exact', head: true })
+      .eq('following_id', userId)
+      .then(({ count }) => {
+        if (count !== null) setFollowerCount(count)
+      })
+
+    supabase
+      .from('follows')
+      .select('*', { count: 'exact', head: true })
+      .eq('follower_id', userId)
+      .then(({ count }) => {
+        if (count !== null) setFollowingCount(count)
+      })
+
+    supabase
+      .from('reviews')
+      .select(`
+        *,
+        reviewer:reviewer_id(username),
+        order:order_id(title)
+      `)
+      .eq('reviewee_id', userId)
+      .eq('is_public', true)
+      .order('created_at', { ascending: false })
+      .then(({ data }) => {
+        if (data) setReviews(data)
+      })
   }
 
+  // 사용자 정보가 없으면 null 반환 (로딩 화면 없음)
   if (!user) {
     return null
   }
