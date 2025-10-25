@@ -353,7 +353,7 @@ body {
 /* 컨텐츠 영역 */
 .content-wrapper {
     display: flex;
-    max-width: 1400px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 32px;
     gap: 32px;
