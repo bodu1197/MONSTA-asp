@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage'
 import ExplorePage from './pages/ExplorePage'
 import ProfilePage from './pages/ProfilePage'
 import CategoriesPage from './pages/CategoriesPage'
+import CategoryPage from './pages/CategoryPage'
 
 function App() {
   const [user, setUser] = useState<any>(null)
@@ -50,6 +51,7 @@ function App() {
           <Route path="/explore" element={<Layout><ExplorePage /></Layout>} />
           <Route path="/profile" element={<Layout>{user ? <ProfilePage /> : <Navigate to="/login" />}</Layout>} />
           <Route path="/categories" element={<Layout><CategoriesPage /></Layout>} />
+          <Route path="/category/:slug" element={<Layout><CategoryPage /></Layout>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

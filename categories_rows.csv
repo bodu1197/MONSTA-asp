@@ -1,0 +1,599 @@
+id,parent_id,name,slug,description,icon_emoji,service_count,is_popular,display_order,created_at
+2d-animation,animation,2D 애니메이션,2d-animation,,,0,false,0,2025-10-24 05:42:09.720473+00
+2d-character,character-illustration,2D 캐릭터,2d-character,,,0,false,3,2025-10-24 05:42:09.720473+00
+3d-animation,animation,3D 애니메이션,3d-animation,,,0,false,1,2025-10-24 05:42:09.720473+00
+3d-character-figure,3d-design,3D 캐릭터·피규어,3d-character-figure,,,0,false,0,2025-10-24 05:42:09.720473+00
+3d-clothing-jewelry,3d-design,3D 의류·쥬얼리,3d-clothing-jewelry,,,0,false,3,2025-10-24 05:42:09.720473+00
+3d-design,design,3D 디자인,3d-design,,,0,false,8,2025-10-24 05:42:09.720473+00
+3d-game-source,3d-design,3D 게임용 소스,3d-game-source,,,0,false,4,2025-10-24 05:42:09.720473+00
+3d-graphics,3d-design,3D 그래픽,3d-graphics,,,0,false,5,2025-10-24 05:42:09.720473+00
+3d-modeling-cg,computer-graphics,3D 모델링,3d-modeling-cg,,,0,false,5,2025-10-24 05:42:09.720473+00
+3d-product-modeling-rendering,3d-design,3D 제품모델링·렌더링,3d-product-modeling-rendering,,,0,false,1,2025-10-24 05:42:09.720473+00
+3d-space-modeling,3d-design,3D 공간 모델링,3d-space-modeling,,,0,false,2,2025-10-24 05:42:09.720473+00
+academic-documents,writing,학술 문서,academic-documents,,,0,false,7,2025-10-24 05:42:09.720473+00
+academic-translation,professional-translation,학술 번역,academic-translation,,,0,false,3,2025-10-24 05:42:09.720473+00
+actor,entertainer,배우,actor,,,0,false,1,2025-10-24 05:42:09.720473+00
+ad-copywriting,business-copy,광고 카피라이팅,ad-copywriting,,,0,true,2,2025-10-24 05:42:09.720473+00
+ad-promo-video,video,광고·홍보 영상,ad-promo-video,,,0,true,0,2025-10-24 05:42:09.720473+00
+admission-prep,career-admission,입시 준비,admission-prep,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-ad-material-design,ai-design,AI 광고소재 디자인,ai-ad-material-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-ad-model,ai-image,AI 광고 모델,ai-ad-model,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-ad-video,ai-video,AI 광고 영상,ai-ad-video,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-aeo-geo,ai-marketing,AI AEO·GEO,ai-aeo-geo,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-agent,ai-development,AI 에이전트,ai-agent,,,0,false,7,2025-10-24 05:42:09.720473+00
+ai-agent-it,ai-it,AI 에이전트,ai-agent-it,,,0,false,7,2025-10-24 05:42:09.720473+00
+ai-automation-program,ai-development,AI 자동화 프로그램,ai-automation-program,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-automation-program-it,ai-it,AI 자동화 프로그램,ai-automation-program-it,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-book-cover,ai-design,AI 책 표지,ai-book-cover,,,0,false,7,2025-10-24 05:42:09.720473+00
+ai-business-monetization-ebook,ai-startup-monetization,AI 사업·수익화 전자책,ai-business-monetization-ebook,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-character-design,ai-design,AI 캐릭터 디자인,ai-character-design,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-content,video-photo,AI 콘텐츠,ai-content,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-content-production,ai-content-writing,AI 콘텐츠 생산,ai-content-production,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-content-production-lesson,ai-education,AI 콘텐츠 제작 레슨,ai-content-production-lesson,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-content-review-editing,ai-content-writing,AI 콘텐츠 검수·편집,ai-content-review-editing,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-content-writing,ai-services,AI 콘텐츠 라이팅,ai-content-writing,,,0,false,7,2025-10-24 05:42:09.720473+00
+ai-data-analysis,ai-development,AI 데이터 분석,ai-data-analysis,,,0,false,8,2025-10-24 05:42:09.720473+00
+ai-data-analysis-it,ai-it,AI 데이터 분석,ai-data-analysis-it,,,0,false,8,2025-10-24 05:42:09.720473+00
+ai-design,ai-services,AI 디자인,ai-design,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-design-etc,ai-design,AI 디자인 기타,ai-design-etc,,,0,false,8,2025-10-24 05:42:09.720473+00
+ai-development,ai-services,AI 개발,ai-development,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-development-analysis-lesson,ai-education,AI 개발·분석 레슨,ai-development-analysis-lesson,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-dubbing-narration,ai-sound,AI 더빙·나레이션,ai-dubbing-narration,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-education,ai-services,AI 교육,ai-education,,,0,false,10,2025-10-24 05:42:09.720473+00
+ai-employment-admission,ai-services,AI 취업·입시,ai-employment-admission,,,0,false,9,2025-10-24 05:42:09.720473+00
+ai-employment-admission-consulting,ai-employment-admission,AI 취업·입시 컨설팅,ai-employment-admission-consulting,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-feature-development-integration,ai-development,AI 기능 개발·연동,ai-feature-development-integration,,,0,false,6,2025-10-24 05:42:09.720473+00
+ai-feature-development-integration-it,ai-it,AI 기능 개발·연동,ai-feature-development-integration-it,,,0,false,6,2025-10-24 05:42:09.720473+00
+ai-hair-model,ai-image,AI 헤어 모델,ai-hair-model,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-illustration,ai-design,AI 일러스트,ai-illustration,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-image,ai-services,AI 이미지,ai-image,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-image-creation-retouching,ai-image,AI 이미지 제작·누끼·보정,ai-image-creation-retouching,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-interpretation,ai-translation-interpretation,AI 통역,ai-interpretation,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-introduction-consulting,ai-development,AI 도입 컨설팅,ai-introduction-consulting,,,0,false,9,2025-10-24 05:42:09.720473+00
+ai-introduction-consulting-it,ai-it,AI 도입 컨설팅,ai-introduction-consulting-it,,,0,false,9,2025-10-24 05:42:09.720473+00
+ai-it,it-programming,AI,ai-it,,,0,false,6,2025-10-24 05:42:09.720473+00
+ai-management-operation-consulting,ai-startup-monetization,AI 경영·운영 자문,ai-management-operation-consulting,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-marketing,ai-services,AI 마케팅,ai-marketing,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-marketing-consulting,ai-marketing,AI 마케팅 컨설팅,ai-marketing-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-marketing-content,ai-marketing,AI 마케팅 콘텐츠,ai-marketing-content,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-marketing-etc,ai-marketing,AI 마케팅 기타,ai-marketing-etc,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-marketing-lesson,ai-education,AI 마케팅 레슨,ai-marketing-lesson,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-modeling-optimization,ai-development,AI 모델링·최적화,ai-modeling-optimization,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-modeling-optimization-it,ai-it,AI 모델링·최적화,ai-modeling-optimization-it,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-music,ai-sound,AI 음원,ai-music,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-photorealistic-model,ai-design,AI 실사·모델,ai-photorealistic-model,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-product-package-design,ai-design,AI 제품·패키지 디자인,ai-product-package-design,,,0,false,4,2025-10-24 05:42:09.720473+00
+ai-product-photo,ai-image,AI 제품 사진,ai-product-photo,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-prompt,ai-services,AI 프롬프트,ai-prompt,,,0,false,3,2025-10-24 05:42:09.720473+00
+ai-prompt-child,ai-prompt,AI 프롬프트,ai-prompt-child,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-prompt-design,design-etc,AI 프롬프트,ai-prompt-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-retouching-composition,ai-design,AI 보정·누끼·합성,ai-retouching-composition,,,0,false,6,2025-10-24 05:42:09.720473+00
+ai-services,,AI 서비스,ai-services,,robot,16,false,999,2025-10-24 05:42:09.720473+00
+ai-short-form-ad-production,ai-marketing,AI 숏폼 광고 제작,ai-short-form-ad-production,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-short-form-video,ai-video,AI 숏폼 영상,ai-short-form-video,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-skill-ebook,ai-education,AI 스킬 전자책,ai-skill-ebook,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-sound,ai-services,AI 음향,ai-sound,,,0,false,6,2025-10-24 05:42:09.720473+00
+ai-space-design,ai-design,AI 공간 디자인,ai-space-design,,,0,false,5,2025-10-24 05:42:09.720473+00
+ai-startup-consulting,ai-startup-monetization,AI 창업 자문,ai-startup-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-startup-monetization,ai-services,AI 창업·수익화,ai-startup-monetization,,,0,false,8,2025-10-24 05:42:09.720473+00
+ai-system-service,ai-development,AI 시스템·서비스,ai-system-service,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-system-service-it,ai-it,AI 시스템·서비스,ai-system-service-it,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-translation-interpretation,ai-services,AI 통·번역,ai-translation-interpretation,,,0,false,11,2025-10-24 05:42:09.720473+00
+ai-translation-review,document-translation,AI 번역 검수·편집,ai-translation-review,,,0,false,9,2025-10-24 05:42:09.720473+00
+ai-translation-review-editing,ai-translation-interpretation,AI 번역 검수·편집,ai-translation-review-editing,,,0,false,0,2025-10-24 05:42:09.720473+00
+ai-upscaling,ai-image,AI 업스케일링(화질 개선),ai-upscaling,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-video,ai-services,AI 영상,ai-video,,,0,false,5,2025-10-24 05:42:09.720473+00
+ai-video-editing-retouching-captioning,ai-video,AI 영상 편집·보정·자막,ai-video-editing-retouching-captioning,,,0,false,2,2025-10-24 05:42:09.720473+00
+ai-work-utilization-lesson,ai-education,AI 업무 활용 레슨,ai-work-utilization-lesson,,,0,false,1,2025-10-24 05:42:09.720473+00
+ai-writing,writing,AI 글쓰기,ai-writing,,,0,false,5,2025-10-24 05:42:09.720473+00
+aircon-cleaning,home-service,에어컨 청소,aircon-cleaning,,,0,false,4,2025-10-24 05:42:09.720473+00
+album-cover,package-cover,앨범커버,album-cover,,,0,false,3,2025-10-24 05:42:09.720473+00
+analysis-strategy,marketing,분석·전략,analysis-strategy,,,0,false,7,2025-10-24 05:42:09.720473+00
+analytics,web-maintenance,애널리틱스,analytics,,,0,false,4,2025-10-24 05:42:09.720473+00
+animation,video-photo,애니메이션,animation,,,0,false,2,2025-10-24 05:42:09.720473+00
+app,mobile,앱,app,,,0,true,0,2025-10-24 05:42:09.720473+00
+app-marketing,industry-purpose,앱마케팅,app-marketing,,,0,false,2,2025-10-24 05:42:09.720473+00
+app-mobile-ui-ux,web-mobile-design,앱·모바일 UI·UX,app-mobile-ui-ux,,,0,true,1,2025-10-24 05:42:09.720473+00
+app-modification-maintenance,mobile,앱 수정·유지보수,app-modification-maintenance,,,0,false,2,2025-10-24 05:42:09.720473+00
+app-packaging,mobile,앱 패키징,app-packaging,,,0,false,1,2025-10-24 05:42:09.720473+00
+appliance-install,home-service,가전 설치/수리,appliance-install,,,0,false,3,2025-10-24 05:42:09.720473+00
+appliance-rental,rental-service,가전 렌탈,appliance-rental,,,0,false,0,2025-10-24 05:42:09.720473+00
+ar-vr-xr,computer-graphics,AR·VR·XR,ar-vr-xr,,,0,false,6,2025-10-24 05:42:09.720473+00
+ars-recording,voice-narration,ARS 녹음,ars-recording,,,0,false,1,2025-10-24 05:42:09.720473+00
+art-lesson,online-lessons,미술 레슨,art-lesson,,,0,false,2,2025-10-24 05:42:09.720473+00
+astrology-fortune,lifestyle,운세/타로,astrology-fortune,,,0,false,3,2025-10-24 05:42:09.720473+00
+audio,video-photo,음향,audio,,,0,false,5,2025-10-24 05:42:09.720473+00
+audio-content,audio,오디오 콘텐츠,audio-content,,,0,false,2,2025-10-24 05:42:09.720473+00
+audio-editing,audio-production,오디오 편집,audio-editing,,,0,false,2,2025-10-24 05:42:09.720473+00
+audio-engineering,audio,오디오 엔지니어링,audio-engineering,,,0,false,3,2025-10-24 05:42:09.720473+00
+audio-etc,audio,기타 음향·음악,audio-etc,,,0,false,4,2025-10-24 05:42:09.720473+00
+audio-production,music-audio,오디오 작업,audio-production,,,0,false,1,2025-10-24 05:42:09.720473+00
+audiobook,voice-narration,오디오북,audiobook,,,0,false,2,2025-10-24 05:42:09.720473+00
+babysitter,daily-service,베이비시터,babysitter,,,0,true,4,2025-10-24 05:42:09.720473+00
+backend-position,job-position,백엔드,backend-position,,,0,false,2,2025-10-24 05:42:09.720473+00
+backlink-traffic,seo-optimization,백링크·트래픽,backlink-traffic,,,0,false,3,2025-10-24 05:42:09.720473+00
+banner-delivery-app,marketing-design,배너·배달어플,banner-delivery-app,,,0,false,4,2025-10-24 05:42:09.720473+00
+banner-x-banner,print-promotional,현수막·X배너,banner-x-banner,,,0,false,2,2025-10-24 05:42:09.720473+00
+barcode-qr-code,design-etc,바코드·QR코드,barcode-qr-code,,,0,false,3,2025-10-24 05:42:09.720473+00
+beauty-care-startup,industry-startup,미용·뷰티케어 창업,beauty-care-startup,,,0,false,3,2025-10-24 05:42:09.720473+00
+beauty-fashion,,뷰티/패션,beauty-fashion,뷰티와 패션 관련 서비스,spa,14,false,14,2025-10-24 05:42:09.720473+00
+beauty-services,beauty-fashion,뷰티 서비스,beauty-services,,,0,false,0,2025-10-24 05:42:09.720473+00
+bgm-production,music-production,BGM 제작,bgm-production,,,0,false,2,2025-10-24 05:42:09.720473+00
+birthday-party,event-planning,생일 파티,birthday-party,,,0,false,1,2025-10-24 05:42:09.720473+00
+blockchain-nft,trend-tech,블록체인·NFT,blockchain-nft,,,0,false,2,2025-10-24 05:42:09.720473+00
+blog-cafe-design,marketing-design,블로그·카페 디자인,blog-cafe-design,,,0,false,5,2025-10-24 05:42:09.720473+00
+blog-cafe-manuscript,content-writing,블로그·카페 원고,blog-cafe-manuscript,,,0,true,0,2025-10-24 05:42:09.720473+00
+blog-management,channel-activation,블로그 관리,blog-management,,,0,true,0,2025-10-24 05:42:09.720473+00
+book-cover-interior,package-cover,책표지·내지,book-cover-interior,,,0,false,1,2025-10-24 05:42:09.720473+00
+book-ebook-publishing,content-writing,책·전자책 출판,book-ebook-publishing,,,0,false,3,2025-10-24 05:42:09.720473+00
+booking-agency,life-service,예약/대행 서비스,booking-agency,,,0,false,3,2025-10-24 05:42:09.720473+00
+bookkeeping,finance-accounting,장부 기장,bookkeeping,,,0,false,0,2025-10-24 05:42:09.720473+00
+bot-chatbot,program,봇·챗봇,bot-chatbot,,,0,false,8,2025-10-24 05:42:09.720473+00
+brand-consulting,analysis-strategy,브랜드 컨설팅,brand-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+brand-design-guide,logo-branding,브랜드 디자인·가이드,brand-design-guide,,,0,false,1,2025-10-24 05:42:09.720473+00
+branding-consulting,corporate-consulting,브랜딩,branding-consulting,,,0,false,2,2025-10-24 05:42:09.720473+00
+broadcast-avatar,marketing-design,방송용 아바타,broadcast-avatar,,,0,false,3,2025-10-24 05:42:09.720473+00
+business,,비즈니스,business,비즈니스 성장을 위한 전문 서비스,briefcase,42,false,78,2025-10-24 05:42:09.720473+00
+business-card,print-promotional,명함,business-card,,,0,false,0,2025-10-24 05:42:09.720473+00
+business-card-printing,printing-materials,명함 인쇄,business-card-printing,,,0,false,0,2025-10-24 05:42:09.720473+00
+business-copy,writing,비즈니스 카피,business-copy,,,0,false,1,2025-10-24 05:42:09.720473+00
+business-documents,writing,비즈니스 문서,business-documents,,,0,false,6,2025-10-24 05:42:09.720473+00
+business-etc,business,기타,business-etc,,,0,false,9,2025-10-24 05:42:09.720473+00
+business-interpretation,interpretation,비즈니스 통역,business-interpretation,,,0,false,6,2025-10-24 05:42:09.720473+00
+business-legal-consulting,legal-service,사업자 법률 자문,business-legal-consulting,,,0,true,0,2025-10-24 05:42:09.720473+00
+business-materials,business,자료·콘텐츠,business-materials,,,0,false,8,2025-10-24 05:42:09.720473+00
+business-plan,business-documents,사업계획서,business-plan,,,0,true,0,2025-10-24 05:42:09.720473+00
+business-skills,job-skills,비즈니스 스킬,business-skills,,,0,false,1,2025-10-24 05:42:09.720473+00
+business-support,business,비즈니스 지원,business-support,,,0,false,7,2025-10-24 05:42:09.720473+00
+business-tax-accounting,tax-accounting,사업자 세무·회계,business-tax-accounting,,,0,true,0,2025-10-24 05:42:09.720473+00
+cafe-management,channel-activation,카페 관리,cafe-management,,,0,false,1,2025-10-24 05:42:09.720473+00
+cafe-restaurant-startup,industry-startup,카페·요식업 창업,cafe-restaurant-startup,,,0,true,1,2025-10-24 05:42:09.720473+00
+cafe24,web-builder,카페24,cafe24,,,0,false,3,2025-10-24 05:42:09.720473+00
+calligraphy,calligraphy-font,캘리그라피,calligraphy,,,0,false,0,2025-10-24 05:42:09.720473+00
+calligraphy-font,design,캘리그라피·폰트,calligraphy-font,,,0,false,12,2025-10-24 05:42:09.720473+00
+car-maintenance,vehicle-service,차량 정비 예약 대행,car-maintenance,,,0,false,1,2025-10-24 05:42:09.720473+00
+car-wash,vehicle-service,세차 서비스,car-wash,,,0,false,0,2025-10-24 05:42:09.720473+00
+career-admission,,취업/입시,career-admission,취업과 입시 준비 서비스,graduation-cap,14,false,20,2025-10-24 05:42:09.720473+00
+career-coaching,coaching-counseling,커리어 코칭,career-coaching,,,0,true,1,2025-10-24 05:42:09.720473+00
+caricature,character-illustration,캐리커쳐,caricature,,,0,false,1,2025-10-24 05:42:09.720473+00
+catering,event-services,케이터링,catering,,,0,false,3,2025-10-24 05:42:09.720473+00
+channel-activation,marketing,채널 활성화,channel-activation,,,0,false,0,2025-10-24 05:42:09.720473+00
+channel-art-design,marketing-design,채널아트 디자인,channel-art-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+character-illustration,design,캐릭터·일러스트,character-illustration,,,0,false,6,2025-10-24 05:42:09.720473+00
+chauffeur-service,vehicle-service,운전 기사,chauffeur-service,,,0,false,3,2025-10-24 05:42:09.720473+00
+chinese-interpretation,interpretation,중국어 통역,chinese-interpretation,,,0,false,1,2025-10-24 05:42:09.720473+00
+chinese-translation,document-translation,중국어 번역,chinese-translation,,,0,true,1,2025-10-24 05:42:09.720473+00
+cleaning-service,home-service,청소 서비스,cleaning-service,,,0,true,0,2025-10-24 05:42:09.720473+00
+clip-marketing,map-marketing,클립 마케팅,clip-marketing,,,0,false,3,2025-10-24 05:42:09.720473+00
+clothing-jewelry-design,fashion-textile,의류·쥬얼리 디자인,clothing-jewelry-design,,,0,false,0,2025-10-24 05:42:09.720473+00
+coaching-counseling,lifestyle,코칭/상담,coaching-counseling,,,0,false,2,2025-10-24 05:42:09.720473+00
+coding-lesson,online-lessons,코딩 레슨,coding-lesson,,,0,true,4,2025-10-24 05:42:09.720473+00
+college-consulting,admission-prep,대입 컨설팅,college-consulting,,,0,false,0,2025-10-24 05:42:09.720473+00
+community-site-banner,marketing-etc,커뮤니티·사이트 배너,community-site-banner,,,0,false,1,2025-10-24 05:42:09.720473+00
+complete-program-store,program,완성형 프로그램 스토어,complete-program-store,,,0,false,0,2025-10-24 05:42:09.720473+00
+computer-graphics,video-photo,컴퓨터 그래픽(CG),computer-graphics,,,0,false,1,2025-10-24 05:42:09.720473+00
+computer-tech-support,it-etc,컴퓨터 기술지원,computer-tech-support,,,0,false,1,2025-10-24 05:42:09.720473+00
+consecutive-interpretation,interpretation,순차통역,consecutive-interpretation,,,0,false,5,2025-10-24 05:42:09.720473+00
+consulting,business,컨설팅,consulting,,,0,false,4,2025-10-24 05:42:09.720473+00
+content-seo,seo-optimization,콘텐츠 SEO,content-seo,,,0,true,1,2025-10-24 05:42:09.720473+00
+content-writing,writing,콘텐츠 글쓰기,content-writing,,,0,false,0,2025-10-24 05:42:09.720473+00
+contract-drafting,legal-services,계약서 작성,contract-drafting,,,0,false,2,2025-10-24 05:42:09.720473+00
+contract-review,legal-service,계약서 검토,contract-review,,,0,false,3,2025-10-24 05:42:09.720473+00
+cooking-lesson,online-lessons,요리 레슨,cooking-lesson,,,0,false,3,2025-10-24 05:42:09.720473+00
+corporate-consulting,business,기업 자문,corporate-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+corporate-event,event-planning,기업 행사,corporate-event,,,0,false,2,2025-10-24 05:42:09.720473+00
+cosmetics-startup,industry-startup,화장품 창업,cosmetics-startup,,,0,false,5,2025-10-24 05:42:09.720473+00
+counseling-coaching,,상담/코칭,counseling-coaching,전문적인 상담과 코칭,bullseye,14,false,15,2025-10-24 05:42:09.720473+00
+crawling-scraping,program,크롤링·스크래핑,crawling-scraping,,,0,false,3,2025-10-24 05:42:09.720473+00
+creative-writing,writing,창작 글쓰기,creative-writing,,,0,false,8,2025-10-24 05:42:09.720473+00
+custom-chatbot-gpt,ai-development,맞춤형 챗봇·GPT,custom-chatbot-gpt,,,0,false,0,2025-10-24 05:42:09.720473+00
+custom-chatbot-gpt-it,ai-it,맞춤형 챗봇·GPT,custom-chatbot-gpt-it,,,0,true,1,2025-10-24 05:42:09.720473+00
+custom-goods,handmade-craft,맞춤 제작,custom-goods,,,0,false,0,2025-10-24 05:42:09.720473+00
+custom-order,,주문제작,custom-order,맞춤형 주문 제작 서비스,hammer,13,false,19,2025-10-24 05:42:09.720473+00
+custom-order-etc,custom-order,기타,custom-order-etc,,,0,false,3,2025-10-24 05:42:09.720473+00
+cv-resume,business-documents,이력서/자소서,cv-resume,,,0,true,4,2025-10-24 05:42:09.720473+00
+daily-service,life-service,일상 서비스,daily-service,,,0,false,1,2025-10-24 05:42:09.720473+00
+data,it-programming,데이터,data,,,0,false,7,2025-10-24 05:42:09.720473+00
+data-entry,business-support,데이터 입력,data-entry,,,0,false,1,2025-10-24 05:42:09.720473+00
+data-labeling,data,데이터 라벨링,data-labeling,,,0,false,1,2025-10-24 05:42:09.720473+00
+data-ml-dl,job-position,데이터·ML·DL,data-ml-dl,,,0,false,4,2025-10-24 05:42:09.720473+00
+data-performance-analysis,analysis-strategy,데이터 성과 분석,data-performance-analysis,,,0,false,2,2025-10-24 05:42:09.720473+00
+data-preprocessing-analysis-visualization,data,데이터 전처리·분석·시각화,data-preprocessing-analysis-visualization,,,0,true,2,2025-10-24 05:42:09.720473+00
+data-purchase-construction,data,데이터 구매·구축,data-purchase-construction,,,0,false,0,2025-10-24 05:42:09.720473+00
+data-research,thesis-research,자료 조사,data-research,,,0,false,3,2025-10-24 05:42:09.720473+00
+database,data,데이터베이스,database,,,0,false,3,2025-10-24 05:42:09.720473+00
+db-marketing,industry-purpose,DB 마케팅,db-marketing,,,0,false,7,2025-10-24 05:42:09.720473+00
+delivery-service,errands,배달 서비스,delivery-service,,,0,false,0,2025-10-24 05:42:09.720473+00
+design,,디자인,design,창의적인 디자인 솔루션,palette,58,false,95,2025-10-24 05:42:09.720473+00
+design-etc,design,기타,design-etc,,,0,false,14,2025-10-24 05:42:09.720473+00
+design-template,design-etc,디자인 템플릿,design-template,,,0,false,1,2025-10-24 05:42:09.720473+00
+designated-driver,vehicle-service,대리 운전,designated-driver,,,0,false,2,2025-10-24 05:42:09.720473+00
+designer-subscription,design-etc,디자이너 구독제,designer-subscription,,,0,false,0,2025-10-24 05:42:09.720473+00
+detail-page,marketing-design,상세페이지,detail-page,,,0,true,0,2025-10-24 05:42:09.720473+00
+devops-infra,job-position,데브옵스·인프라,devops-infra,,,0,false,5,2025-10-24 05:42:09.720473+00
+diet-consulting,health-wellness,다이어트 상담,diet-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+disinfection-service,home-service,소독 서비스,disinfection-service,,,0,false,6,2025-10-24 05:42:09.720473+00
+display-video-banner,performance-ads,디스플레이·영상·배너,display-video-banner,,,0,false,2,2025-10-24 05:42:09.720473+00
+dj-service,event-services,DJ 서비스,dj-service,,,0,false,2,2025-10-24 05:42:09.720473+00
+document-delivery,delivery-service,서류 배달,document-delivery,,,0,false,1,2025-10-24 05:42:09.720473+00
+document-editing,typing-editing,문서 편집,document-editing,,,0,false,2,2025-10-24 05:42:09.720473+00
+document-materials,writing-etc,문서 자료,document-materials,,,0,false,1,2025-10-24 05:42:09.720473+00
+document-translation,translation,번역,document-translation,,,0,false,0,2025-10-24 05:42:09.720473+00
+domestic-patent-trademark,intellectual-property,국내 특허·상표,domestic-patent-trademark,,,0,true,0,2025-10-24 05:42:09.720473+00
+drawing-creation-modification,space-architecture,도면 제작·수정,drawing-creation-modification,,,0,false,0,2025-10-24 05:42:09.720473+00
+drone-filming,video,드론 촬영,drone-filming,,,0,false,8,2025-10-24 05:42:09.720473+00
+dubbing,media-translation,더빙,dubbing,,,0,false,1,2025-10-24 05:42:09.720473+00
+ebook,ebook-template,전자책,ebook,,,0,false,0,2025-10-24 05:42:09.720473+00
+ebook-cover-interior,package-cover,전자책 표지·내지,ebook-cover-interior,,,0,false,2,2025-10-24 05:42:09.720473+00
+ebook-creation,ebook,전자책 제작,ebook-creation,,,0,false,0,2025-10-24 05:42:09.720473+00
+ebook-publishing,ebook,전자책 출판,ebook-publishing,,,0,false,1,2025-10-24 05:42:09.720473+00
+ebook-template,,전자책/템플릿,ebook-template,전자책과 각종 템플릿,book-open,15,false,17,2025-10-24 05:42:09.720473+00
+educational-video,video,교육 영상,educational-video,,,0,false,4,2025-10-24 05:42:09.720473+00
+emoticon,character-illustration,이모티콘,emoticon,,,0,false,4,2025-10-24 05:42:09.720473+00
+employer-labor-consulting,labor-service,고용인 노무 상담,employer-labor-consulting,,,0,true,0,2025-10-24 05:42:09.720473+00
+employment-contract-consulting,labor-service,근로계약서 상담,employment-contract-consulting,,,0,false,2,2025-10-24 05:42:09.720473+00
+employment-subsidy-consulting,labor-service,고용지원금 상담,employment-subsidy-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+english-interpretation,interpretation,영어 통역,english-interpretation,,,0,true,0,2025-10-24 05:42:09.720473+00
+english-translation,document-translation,영어 번역,english-translation,,,0,true,0,2025-10-24 05:42:09.720473+00
+entertainer,video-photo,엔터테이너,entertainer,,,0,false,6,2025-10-24 05:42:09.720473+00
+errand-service,errands,심부름 대행,errand-service,,,0,false,1,2025-10-24 05:42:09.720473+00
+errands,,심부름,errands,빠른 배달 및 심부름 서비스,motorcycle,13,false,75,2025-10-24 05:42:09.720473+00
+essay-writing,academic-documents,에세이,essay-writing,,,0,false,1,2025-10-24 05:42:09.720473+00
+etc-ai-lesson,ai-education,기타 AI 레슨,etc-ai-lesson,,,0,false,5,2025-10-24 05:42:09.720473+00
+event,,이벤트,event,특별한 날을 위한 서비스,calendar,14,false,12,2025-10-24 05:42:09.720473+00
+event-planning,event,행사 기획,event-planning,,,0,false,0,2025-10-24 05:42:09.720473+00
+event-promotion,marketing-etc,행사·이벤트,event-promotion,,,0,false,4,2025-10-24 05:42:09.720473+00
+event-services,event,행사 서비스,event-services,,,0,false,1,2025-10-24 05:42:09.720473+00
+event-snap,photography,이벤트 스냅,event-snap,,,0,false,2,2025-10-24 05:42:09.720473+00
+event-video,video,행사 영상,event-video,,,0,false,5,2025-10-24 05:42:09.720473+00
+excel-spreadsheet,program,엑셀·스프레드시트,excel-spreadsheet,,,0,false,7,2025-10-24 05:42:09.720473+00
+excel-template,templates,엑셀 템플릿,excel-template,,,0,false,1,2025-10-24 05:42:09.720473+00
+excel-training,office-skills,엑셀 교육,excel-training,,,0,false,0,2025-10-24 05:42:09.720473+00
+exhibition-stage-design,space-architecture,전시·무대 디자인,exhibition-stage-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+experience-group-recruitment,viral-sponsorship,체험단 모집,experience-group-recruitment,,,0,false,1,2025-10-24 05:42:09.720473+00
+fashion-startup,industry-startup,패션 창업,fashion-startup,,,0,false,2,2025-10-24 05:42:09.720473+00
+fashion-styling,beauty-fashion,패션 스타일링,fashion-styling,,,0,false,1,2025-10-24 05:42:09.720473+00
+fashion-textile,design,패션·텍스타일,fashion-textile,,,0,false,13,2025-10-24 05:42:09.720473+00
+file-conversion,it-etc,파일변환,file-conversion,,,0,false,3,2025-10-24 05:42:09.720473+00
+finance-accounting,business,재무/회계,finance-accounting,,,0,false,5,2025-10-24 05:42:09.720473+00
+financial-consulting,corporate-consulting,재무 자문,financial-consulting,,,0,false,7,2025-10-24 05:42:09.720473+00
+financial-planning,finance-accounting,재무 설계,financial-planning,,,0,false,2,2025-10-24 05:42:09.720473+00
+fitness-training,health-wellness,피트니스 트레이닝,fitness-training,,,0,true,0,2025-10-24 05:42:09.720473+00
+flower-arrangement,gift-items,꽃꽂이,flower-arrangement,,,0,false,2,2025-10-24 05:42:09.720473+00
+flower-delivery,delivery-service,꽃 배달,flower-delivery,,,0,false,5,2025-10-24 05:42:09.720473+00
+flyer-poster-print,print-promotional,전단지·포스터·인쇄물,flyer-poster-print,,,0,false,1,2025-10-24 05:42:09.720473+00
+font-design,calligraphy-font,폰트,font-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+food-delivery,delivery-service,음식 배달 대행,food-delivery,,,0,false,3,2025-10-24 05:42:09.720473+00
+fortune-tarot,,운세/타로,fortune-tarot,운세와 타로 상담,star,16,false,16,2025-10-24 05:42:09.720473+00
+fortune-telling,astrology-fortune,사주/운세,fortune-telling,,,0,false,1,2025-10-24 05:42:09.720473+00
+franchise-startup,industry-startup,프랜차이즈 창업,franchise-startup,,,0,false,7,2025-10-24 05:42:09.720473+00
+french-translation,document-translation,프랑스어 번역,french-translation,,,0,false,4,2025-10-24 05:42:09.720473+00
+frontend-position,job-position,프론트엔드,frontend-position,,,0,false,1,2025-10-24 05:42:09.720473+00
+fullstack-position,job-position,풀스택,fullstack-position,,,0,false,3,2025-10-24 05:42:09.720473+00
+game-account,gaming,게임 계정,game-account,,,0,false,2,2025-10-24 05:42:09.720473+00
+game-ar-vr,trend-tech,게임·AR·VR,game-ar-vr,,,0,false,0,2025-10-24 05:42:09.720473+00
+game-coaching,gaming,게임 코칭,game-coaching,,,0,false,0,2025-10-24 05:42:09.720473+00
+game-leveling,gaming,레벨링 대행,game-leveling,,,0,false,1,2025-10-24 05:42:09.720473+00
+game-web3,design,게임·웹3.0,game-web3,,,0,false,9,2025-10-24 05:42:09.720473+00
+gaming,hobby-handmade,게임,gaming,,,0,false,2,2025-10-24 05:42:09.720473+00
+general-management-consulting,corporate-consulting,일반 경영 자문,general-management-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+general-program,program,일반 프로그램,general-program,,,0,false,4,2025-10-24 05:42:09.720473+00
+german-translation,document-translation,독일어 번역,german-translation,,,0,false,5,2025-10-24 05:42:09.720473+00
+gift-delivery,delivery-service,선물 배달,gift-delivery,,,0,false,6,2025-10-24 05:42:09.720473+00
+gift-items,hobby-handmade,선물/기념품,gift-items,,,0,false,1,2025-10-24 05:42:09.720473+00
+gift-wrapping,gift-items,선물 포장,gift-wrapping,,,0,false,1,2025-10-24 05:42:09.720473+00
+global-business,corporate-consulting,해외 사업·해외 진출,global-business,,,0,false,5,2025-10-24 05:42:09.720473+00
+global-influencer-seeding,global-marketing,해외 인플루언서 시딩,global-influencer-seeding,,,0,false,3,2025-10-24 05:42:09.720473+00
+global-marketing,marketing,해외 마케팅,global-marketing,,,0,false,5,2025-10-24 05:42:09.720473+00
+global-marketing-etc,global-marketing,기타 해외 마케팅,global-marketing-etc,,,0,false,4,2025-10-24 05:42:09.720473+00
+global-press-release,global-marketing,해외 언론홍보,global-press-release,,,0,false,0,2025-10-24 05:42:09.720473+00
+global-store-channel-activation,global-marketing,해외 쇼핑몰·채널 활성화,global-store-channel-activation,,,0,false,2,2025-10-24 05:42:09.720473+00
+global-store-channel-operation,global-marketing,해외 쇼핑몰·채널 운영,global-store-channel-operation,,,0,false,1,2025-10-24 05:42:09.720473+00
+gnuboard,web-builder,그누보드,gnuboard,,,0,false,1,2025-10-24 05:42:09.720473+00
+government-office,booking-agency,관공서 업무 대행,government-office,,,0,false,3,2025-10-24 05:42:09.720473+00
+graphic-design,design,그래픽 디자인,graphic-design,,,0,false,7,2025-10-24 05:42:09.720473+00
+hair-makeup,video-photo-etc,헤어·메이크업,hair-makeup,,,0,false,1,2025-10-24 05:42:09.720473+00
+hair-styling,beauty-services,헤어 스타일링,hair-styling,,,0,false,1,2025-10-24 05:42:09.720473+00
+handmade-craft,hobby-handmade,핸드메이드,handmade-craft,,,0,false,0,2025-10-24 05:42:09.720473+00
+hardware-embedded,it-etc,하드웨어·임베디드,hardware-embedded,,,0,false,2,2025-10-24 05:42:09.720473+00
+health-food-startup,industry-startup,건강기능식품 창업,health-food-startup,,,0,false,4,2025-10-24 05:42:09.720473+00
+health-wellness,lifestyle,건강/웰니스,health-wellness,,,0,false,1,2025-10-24 05:42:09.720473+00
+hobby-handmade,,취미/핸드메이드,hobby-handmade,취미 활동과 수제 작품,scissors,23,false,13,2025-10-24 05:42:09.720473+00
+home-service,life-service,가정 서비스,home-service,,,0,false,0,2025-10-24 05:42:09.720473+00
+homepage-modification-maintenance,web-maintenance,홈페이지 수정·유지보수,homepage-modification-maintenance,,,0,false,0,2025-10-24 05:42:09.720473+00
+homepage-new-creation,web-creation,홈페이지 신규 제작,homepage-new-creation,,,0,true,0,2025-10-24 05:42:09.720473+00
+hospital-booking,booking-agency,병원 예약/동행,hospital-booking,,,0,false,2,2025-10-24 05:42:09.720473+00
+hospital-pharmacy-startup,industry-startup,병원·약국 창업,hospital-pharmacy-startup,,,0,false,6,2025-10-24 05:42:09.720473+00
+housekeeping,home-service,파출부/가사도우미,housekeeping,,,0,true,1,2025-10-24 05:42:09.720473+00
+hr-consulting,consulting,인사 컨설팅,hr-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+hr-corporate-culture,corporate-consulting,HR·기업문화,hr-corporate-culture,,,0,false,4,2025-10-24 05:42:09.720473+00
+icon-button,web-mobile-design,아이콘·버튼,icon-button,,,0,false,3,2025-10-24 05:42:09.720473+00
+illustration,character-illustration,일러스트,illustration,,,0,true,0,2025-10-24 05:42:09.720473+00
+image-voice-recognition,ai-development,이미지·음성 인식,image-voice-recognition,,,0,false,5,2025-10-24 05:42:09.720473+00
+image-voice-recognition-it,ai-it,이미지·음성 인식,image-voice-recognition-it,,,0,false,5,2025-10-24 05:42:09.720473+00
+imweb,web-builder,아임웹,imweb,,,0,false,4,2025-10-24 05:42:09.720473+00
+industrial-product-design,design,산업·제품 디자인,industrial-product-design,,,0,false,10,2025-10-24 05:42:09.720473+00
+industry-marketing-package,industry-purpose,업종별 마케팅 패키지,industry-marketing-package,,,0,false,5,2025-10-24 05:42:09.720473+00
+industry-purpose,marketing,업종·목적별,industry-purpose,,,0,false,3,2025-10-24 05:42:09.720473+00
+industry-specialized-writing,content-writing,산업별 전문 글작성,industry-specialized-writing,,,0,false,4,2025-10-24 05:42:09.720473+00
+industry-startup,business,업종별 창업,industry-startup,,,0,false,2,2025-10-24 05:42:09.720473+00
+industry-video,video,업종별 영상,industry-video,,,0,false,2,2025-10-24 05:42:09.720473+00
+influencer-marketing,viral-sponsorship,인플루언서 마케팅,influencer-marketing,,,0,true,0,2025-10-24 05:42:09.720473+00
+infographic,computer-graphics,인포그래픽,infographic,,,0,false,1,2025-10-24 05:42:09.720473+00
+information-security,security-quality,정보 보안,information-security,,,0,false,0,2025-10-24 05:42:09.720473+00
+instagram-management,channel-activation,인스타그램 관리,instagram-management,,,0,true,2,2025-10-24 05:42:09.720473+00
+intellectual-property,tax-legal-labor,지식재산권 보호,intellectual-property,,,0,false,2,2025-10-24 05:42:09.720473+00
+interior-consulting,space-architecture,인테리어 컨설팅,interior-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+interpretation,translation,통역,interpretation,,,0,false,3,2025-10-24 05:42:09.720473+00
+interpretation-companion,booking-agency,통역 동행,interpretation-companion,,,0,false,4,2025-10-24 05:42:09.720473+00
+interview-coaching,job-preparation,면접 코칭,interview-coaching,,,0,false,1,2025-10-24 05:42:09.720473+00
+intro-logo,computer-graphics,인트로·로고,intro-logo,,,0,false,3,2025-10-24 05:42:09.720473+00
+investment-consulting,finance-accounting,투자 컨설팅,investment-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+it-consulting,corporate-consulting,IT 컨설팅,it-consulting,,,0,false,6,2025-10-24 05:42:09.720473+00
+it-etc,it-programming,기타,it-etc,,,0,false,10,2025-10-24 05:42:09.720473+00
+it-programming,,IT/프로그래밍,it-programming,"웹, 앱, 소프트웨어 개발",code,66,false,999,2025-10-24 05:42:09.720473+00
+japanese-interpretation,interpretation,일본어 통역,japanese-interpretation,,,0,false,2,2025-10-24 05:42:09.720473+00
+japanese-translation,document-translation,일본어 번역,japanese-translation,,,0,true,2,2025-10-24 05:42:09.720473+00
+jewelry-making,handmade-craft,액세서리,jewelry-making,,,0,false,1,2025-10-24 05:42:09.720473+00
+jingle-production,music-production,징글/CM송,jingle-production,,,0,false,3,2025-10-24 05:42:09.720473+00
+job-position,it-programming,직무직군,job-position,,,0,false,9,2025-10-24 05:42:09.720473+00
+job-preparation,career-admission,취업 준비,job-preparation,,,0,false,0,2025-10-24 05:42:09.720473+00
+job-skills,,직무역량,job-skills,직무 능력 향상 서비스,chart-line,16,false,21,2025-10-24 05:42:09.720473+00
+keyword-competitor-analysis,seo-optimization,키워드·경쟁사 분석,keyword-competitor-analysis,,,0,false,2,2025-10-24 05:42:09.720473+00
+keyword-search-ads,performance-ads,키워드·검색 광고,keyword-search-ads,,,0,true,1,2025-10-24 05:42:09.720473+00
+knitting,handmade-craft,뜨개질,knitting,,,0,false,3,2025-10-24 05:42:09.720473+00
+labor-service,tax-legal-labor,노무,labor-service,,,0,false,3,2025-10-24 05:42:09.720473+00
+landing-page,web-creation,랜딩페이지,landing-page,,,0,false,2,2025-10-24 05:42:09.720473+00
+language-lesson,online-lessons,외국어 레슨,language-lesson,,,0,true,0,2025-10-24 05:42:09.720473+00
+laundry-service,daily-service,세탁 서비스,laundry-service,,,0,false,0,2025-10-24 05:42:09.720473+00
+legal-administration,legal-service,법무·행정,legal-administration,,,0,false,2,2025-10-24 05:42:09.720473+00
+legal-consulting,legal-services,법률 자문,legal-consulting,,,0,false,0,2025-10-24 05:42:09.720473+00
+legal-service,tax-legal-labor,법무,legal-service,,,0,false,0,2025-10-24 05:42:09.720473+00
+legal-services,business,법률 서비스,legal-services,,,0,false,6,2025-10-24 05:42:09.720473+00
+legal-translation,professional-translation,법률 번역,legal-translation,,,0,false,0,2025-10-24 05:42:09.720473+00
+life-coaching,coaching-counseling,라이프 코칭,life-coaching,,,0,false,0,2025-10-24 05:42:09.720473+00
+life-service,,생활 서비스,life-service,일상 생활 편의 서비스,home,35,false,88,2025-10-24 05:42:09.720473+00
+lifestyle,,라이프스타일,lifestyle,삶의 질을 높이는 서비스,book,20,false,11,2025-10-24 05:42:09.720473+00
+linkedin-marketing,channel-activation,링크드인 마케팅,linkedin-marketing,,,0,false,6,2025-10-24 05:42:09.720473+00
+live-commerce,industry-purpose,라이브커머스,live-commerce,,,0,false,4,2025-10-24 05:42:09.720473+00
+living-goods-rental,rental-service,생활용품 렌탈,living-goods-rental,,,0,false,1,2025-10-24 05:42:09.720473+00
+logistics-production,corporate-consulting,물류·생산,logistics-production,,,0,false,3,2025-10-24 05:42:09.720473+00
+logo-branding,design,로고·브랜딩,logo-branding,,,0,false,0,2025-10-24 05:42:09.720473+00
+logo-design,logo-branding,로고 디자인,logo-design,,,0,true,0,2025-10-24 05:42:09.720473+00
+lottie-web-animation,animation,로티·web 애니메이션,lottie-web-animation,,,0,false,3,2025-10-24 05:42:09.720473+00
+makeup,beauty-services,메이크업,makeup,,,0,false,0,2025-10-24 05:42:09.720473+00
+management-consulting,consulting,경영 컨설팅,management-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+map-activation,map-marketing,지도 활성화,map-activation,,,0,false,1,2025-10-24 05:42:09.720473+00
+map-marketing,marketing,지도 마케팅,map-marketing,,,0,false,2,2025-10-24 05:42:09.720473+00
+map-optimization-exposure,map-marketing,지도 최적화노출,map-optimization-exposure,,,0,true,2,2025-10-24 05:42:09.720473+00
+map-setup,map-marketing,지도 세팅,map-setup,,,0,false,0,2025-10-24 05:42:09.720473+00
+market-research,business-support,시장 조사,market-research,,,0,false,2,2025-10-24 05:42:09.720473+00
+marketing,,마케팅,marketing,효과적인 마케팅 전략,bullhorn,48,false,90,2025-10-24 05:42:09.720473+00
+marketing-consulting,analysis-strategy,마케팅 컨설팅,marketing-consulting,,,0,true,0,2025-10-24 05:42:09.720473+00
+marketing-design,design,마케팅 디자인,marketing-design,,,0,false,4,2025-10-24 05:42:09.720473+00
+marketing-etc,marketing,기타 마케팅,marketing-etc,,,0,false,9,2025-10-24 05:42:09.720473+00
+marketing-material-keyword,marketing-etc,마케팅 자료·키워드,marketing-material-keyword,,,0,false,3,2025-10-24 05:42:09.720473+00
+mc,entertainer,MC,mc,,,0,false,3,2025-10-24 05:42:09.720473+00
+mc-hosting,event-services,사회/진행,mc-hosting,,,0,false,0,2025-10-24 05:42:09.720473+00
+media-art,computer-graphics,미디어 아트,media-art,,,0,false,2,2025-10-24 05:42:09.720473+00
+media-translation,translation,영상 번역,media-translation,,,0,false,1,2025-10-24 05:42:09.720473+00
+medical-translation,professional-translation,의료 번역,medical-translation,,,0,false,1,2025-10-24 05:42:09.720473+00
+medicine-delivery,delivery-service,약 배달,medicine-delivery,,,0,false,4,2025-10-24 05:42:09.720473+00
+meditation,health-wellness,명상,meditation,,,0,false,3,2025-10-24 05:42:09.720473+00
+menu-board,print-promotional,메뉴판,menu-board,,,0,false,3,2025-10-24 05:42:09.720473+00
+message-marketing,industry-purpose,메시지 마케팅,message-marketing,,,0,false,8,2025-10-24 05:42:09.720473+00
+metaverse,game-web3,메타버스,metaverse,,,0,false,1,2025-10-24 05:42:09.720473+00
+metaverse-it,trend-tech,메타버스,metaverse-it,,,0,false,1,2025-10-24 05:42:09.720473+00
+mixing-mastering,audio-production,믹싱/마스터링,mixing-mastering,,,0,false,0,2025-10-24 05:42:09.720473+00
+mobile,it-programming,모바일,mobile,,,0,false,4,2025-10-24 05:42:09.720473+00
+model,entertainer,모델,model,,,0,false,0,2025-10-24 05:42:09.720473+00
+motion-graphics,computer-graphics,모션그래픽,motion-graphics,,,0,true,0,2025-10-24 05:42:09.720473+00
+moving-service,home-service,이사 서비스,moving-service,,,0,true,8,2025-10-24 05:42:09.720473+00
+music-arrangement,music-production,편곡,music-arrangement,,,0,false,1,2025-10-24 05:42:09.720473+00
+music-audio,,음악/오디오,music-audio,음악 제작 및 오디오 서비스,music,10,false,65,2025-10-24 05:42:09.720473+00
+music-composition,music-production,작곡,music-composition,,,0,false,0,2025-10-24 05:42:09.720473+00
+music-lesson,online-lessons,음악 레슨,music-lesson,,,0,false,1,2025-10-24 05:42:09.720473+00
+music-production,music-audio,음악 제작,music-production,,,0,false,0,2025-10-24 05:42:09.720473+00
+music-source,audio,음악·음원,music-source,,,0,false,1,2025-10-24 05:42:09.720473+00
+nail-art,beauty-services,네일아트,nail-art,,,0,false,2,2025-10-24 05:42:09.720473+00
+naming-branding,business-copy,네이밍·브랜딩,naming-branding,,,0,true,0,2025-10-24 05:42:09.720473+00
+naming-service,astrology-fortune,작명,naming-service,,,0,false,2,2025-10-24 05:42:09.720473+00
+natural-language-processing,ai-development,자연어 처리,natural-language-processing,,,0,false,10,2025-10-24 05:42:09.720473+00
+natural-language-processing-it,ai-it,자연어 처리,natural-language-processing-it,,,0,false,10,2025-10-24 05:42:09.720473+00
+negotiation-skill,business-skills,협상 스킬,negotiation-skill,,,0,false,1,2025-10-24 05:42:09.720473+00
+nft-art,game-web3,NFT아트,nft-art,,,0,false,2,2025-10-24 05:42:09.720473+00
+notarized-translation,document-translation,번역공증대행,notarized-translation,,,0,false,8,2025-10-24 05:42:09.720473+00
+notion-template,templates,노션 템플릿,notion-template,,,0,false,2,2025-10-24 05:42:09.720473+00
+notion-web,web-builder,노션,notion-web,,,0,false,5,2025-10-24 05:42:09.720473+00
+novel-writing,creative-writing,소설,novel-writing,,,0,false,0,2025-10-24 05:42:09.720473+00
+office-skills,job-skills,오피스 스킬,office-skills,,,0,false,0,2025-10-24 05:42:09.720473+00
+on-site-staff,video,현장 스탭,on-site-staff,,,0,false,10,2025-10-24 05:42:09.720473+00
+online-lessons,lifestyle,온라인 레슨,online-lessons,,,0,false,0,2025-10-24 05:42:09.720473+00
+online-store-startup,industry-startup,온라인 쇼핑몰 창업,online-store-startup,,,0,true,0,2025-10-24 05:42:09.720473+00
+online-streaming,video,온라인 중계,online-streaming,,,0,false,7,2025-10-24 05:42:09.720473+00
+operation-support,corporate-consulting,운영 지원,operation-support,,,0,false,8,2025-10-24 05:42:09.720473+00
+organizing-consulting,home-service,정리정돈/수납 컨설팅,organizing-consulting,,,0,false,2,2025-10-24 05:42:09.720473+00
+other-channel-management,channel-activation,기타 채널 관리,other-channel-management,,,0,false,7,2025-10-24 05:42:09.720473+00
+other-consulting-customs,tax-legal-labor-etc,기타 자문(관세사 등),other-consulting-customs,,,0,false,0,2025-10-24 05:42:09.720473+00
+other-consulting-support,business-etc,기타 자문·지원,other-consulting-support,,,0,false,0,2025-10-24 05:42:09.720473+00
+other-copywriting,business-copy,기타 카피라이팅,other-copywriting,,,0,false,3,2025-10-24 05:42:09.720473+00
+other-custom-order,custom-order-etc,기타 주문제작,other-custom-order,,,0,false,0,2025-10-24 05:42:09.720473+00
+other-design,design-etc,기타 디자인,other-design,,,0,false,4,2025-10-24 05:42:09.720473+00
+other-intellectual-property,intellectual-property,기타 지식재산권,other-intellectual-property,,,0,false,1,2025-10-24 05:42:09.720473+00
+other-language-interpretation,interpretation,기타 언어 통역,other-language-interpretation,,,0,false,3,2025-10-24 05:42:09.720473+00
+other-language-translation,document-translation,기타 언어 번역,other-language-translation,,,0,false,6,2025-10-24 05:42:09.720473+00
+other-marketing,marketing-etc,기타 마케팅,other-marketing,,,0,false,5,2025-10-24 05:42:09.720473+00
+other-programming,it-etc,기타 프로그래밍,other-programming,,,0,false,4,2025-10-24 05:42:09.720473+00
+other-startup,industry-startup,기타 창업,other-startup,,,0,false,10,2025-10-24 05:42:09.720473+00
+other-writing,writing-etc,기타 글쓰기,other-writing,,,0,false,0,2025-10-24 05:42:09.720473+00
+outdoor-print-broadcast-ad,marketing-etc,옥외·인쇄·방송 광고,outdoor-print-broadcast-ad,,,0,false,0,2025-10-24 05:42:09.720473+00
+package,package-cover,패키지,package,,,0,false,0,2025-10-24 05:42:09.720473+00
+package-cover,design,패키지·커버,package-cover,,,0,false,5,2025-10-24 05:42:09.720473+00
+package-delivery,delivery-service,택배 대행,package-delivery,,,0,true,2,2025-10-24 05:42:09.720473+00
+party-equipment-rental,rental-service,파티/이벤트 용품 렌탈,party-equipment-rental,,,0,false,2,2025-10-24 05:42:09.720473+00
+patent-trademark,legal-services,특허/상표,patent-trademark,,,0,false,1,2025-10-24 05:42:09.720473+00
+pattern-sample-production,fashion-textile,패턴·샘플제작,pattern-sample-production,,,0,false,2,2025-10-24 05:42:09.720473+00
+performance,entertainer,공연,performance,,,0,false,4,2025-10-24 05:42:09.720473+00
+performance-ads,marketing,광고(퍼포먼스),performance-ads,,,0,false,6,2025-10-24 05:42:09.720473+00
+personal-color,fashion-styling,퍼스널 컬러,personal-color,,,0,false,0,2025-10-24 05:42:09.720473+00
+personal-legal-consulting,legal-service,개인 법률 자문,personal-legal-consulting,,,0,true,1,2025-10-24 05:42:09.720473+00
+personal-org-goal-management,startup-consulting,개인·조직 목표 관리,personal-org-goal-management,,,0,false,1,2025-10-24 05:42:09.720473+00
+personal-profile-photography,photography,개인·프로필 사진,personal-profile-photography,,,0,false,1,2025-10-24 05:42:09.720473+00
+personal-tax-accounting,tax-accounting,개인 세무·회계,personal-tax-accounting,,,0,true,1,2025-10-24 05:42:09.720473+00
+personalized-gift,gift-items,개인화 선물,personalized-gift,,,0,false,0,2025-10-24 05:42:09.720473+00
+pest-control,home-service,해충방제/방역,pest-control,,,0,false,5,2025-10-24 05:42:09.720473+00
+pet-care,daily-service,반려동물 케어,pet-care,,,0,true,1,2025-10-24 05:42:09.720473+00
+pet-grooming,daily-service,반려동물 미용,pet-grooming,,,0,false,3,2025-10-24 05:42:09.720473+00
+pet-startup,industry-startup,반려동물 창업,pet-startup,,,0,false,9,2025-10-24 05:42:09.720473+00
+pet-walking,daily-service,반려동물 산책 대행,pet-walking,,,0,false,2,2025-10-24 05:42:09.720473+00
+photo-retouching,photography,사진 보정,photo-retouching,,,0,true,3,2025-10-24 05:42:09.720473+00
+photography,video-photo,사진,photography,,,0,false,4,2025-10-24 05:42:09.720473+00
+photoshop-file-conversion,graphic-design,포토샵·파일변환,photoshop-file-conversion,,,0,false,1,2025-10-24 05:42:09.720473+00
+pickup-service,errand-service,픽업 서비스,pickup-service,,,0,false,1,2025-10-24 05:42:09.720473+00
+podcast-editing,audio-production,팟캐스트 편집,podcast-editing,,,0,false,3,2025-10-24 05:42:09.720473+00
+poetry,creative-writing,시/수필,poetry,,,0,false,3,2025-10-24 05:42:09.720473+00
+popular-post-management,seo-optimization,인기게시물 관리,popular-post-management,,,0,false,5,2025-10-24 05:42:09.720473+00
+portal-optimization-exposure,seo-optimization,포털 최적화노출,portal-optimization-exposure,,,0,false,4,2025-10-24 05:42:09.720473+00
+portal-qa,industry-purpose,포털질문·답변,portal-qa,,,0,false,3,2025-10-24 05:42:09.720473+00
+portfolio-making,job-preparation,포트폴리오 제작,portfolio-making,,,0,false,2,2025-10-24 05:42:09.720473+00
+postal-service,errand-service,우편 업무 대행,postal-service,,,0,false,4,2025-10-24 05:42:09.720473+00
+poster-printing,printing-materials,포스터 인쇄,poster-printing,,,0,false,1,2025-10-24 05:42:09.720473+00
+pottery,handmade-craft,도자기,pottery,,,0,false,2,2025-10-24 05:42:09.720473+00
+ppt-infographic,graphic-design,PPT·인포그래픽,ppt-infographic,,,0,true,0,2025-10-24 05:42:09.720473+00
+ppt-template,templates,PPT 템플릿,ppt-template,,,0,false,0,2025-10-24 05:42:09.720473+00
+ppt-training,office-skills,PPT 교육,ppt-training,,,0,false,1,2025-10-24 05:42:09.720473+00
+presentation,business-documents,프레젠테이션,presentation,,,0,false,3,2025-10-24 05:42:09.720473+00
+presentation-skill,business-skills,프레젠테이션,presentation-skill,,,0,false,0,2025-10-24 05:42:09.720473+00
+press-article-column,content-writing,보도자료·기사·칼럼,press-article-column,,,0,true,2,2025-10-24 05:42:09.720473+00
+press-release,industry-purpose,언론홍보,press-release,,,0,false,1,2025-10-24 05:42:09.720473+00
+print-promotional,design,인쇄·홍보물,print-promotional,,,0,false,1,2025-10-24 05:42:09.720473+00
+printing-materials,custom-order,인쇄물,printing-materials,,,0,false,2,2025-10-24 05:42:09.720473+00
+product-copywriting,business-copy,제품 카피라이팅,product-copywriting,,,0,true,1,2025-10-24 05:42:09.720473+00
+product-drawing-sketch,industrial-product-design,제품 도면·스케치,product-drawing-sketch,,,0,false,1,2025-10-24 05:42:09.720473+00
+product-mechanism-design,industrial-product-design,제품·기구 설계,product-mechanism-design,,,0,false,0,2025-10-24 05:42:09.720473+00
+product-promo-photography,photography,제품·홍보 사진,product-promo-photography,,,0,true,0,2025-10-24 05:42:09.720473+00
+product-video,video,제품 영상,product-video,,,0,false,3,2025-10-24 05:42:09.720473+00
+professional-translation,translation,전문 분야 번역,professional-translation,,,0,false,2,2025-10-24 05:42:09.720473+00
+program,it-programming,프로그램,program,,,0,false,3,2025-10-24 05:42:09.720473+00
+program-modification-maintenance,program,프로그램 수정·유지보수,program-modification-maintenance,,,0,false,5,2025-10-24 05:42:09.720473+00
+promotional-print-output,print-promotional,홍보물 인쇄·출력,promotional-print-output,,,0,false,4,2025-10-24 05:42:09.720473+00
+prompt-engineering,ai-development,프롬프트 설계(엔지니어링),prompt-engineering,,,0,false,3,2025-10-24 05:42:09.720473+00
+prompt-engineering-it,ai-it,프롬프트 설계(엔지니어링),prompt-engineering-it,,,0,false,3,2025-10-24 05:42:09.720473+00
+proofreading,document-translation,감수,proofreading,,,0,false,7,2025-10-24 05:42:09.720473+00
+proofreading-correction,proofreading-revision,교정·교열 첨삭,proofreading-correction,,,0,false,0,2025-10-24 05:42:09.720473+00
+proofreading-revision,writing,교정·첨삭,proofreading-revision,,,0,false,4,2025-10-24 05:42:09.720473+00
+proposal-writing,business-documents,제안서 작성,proposal-writing,,,0,false,1,2025-10-24 05:42:09.720473+00
+prototype-3d-printing,3d-design,시제품·3D프린팅,prototype-3d-printing,,,0,false,6,2025-10-24 05:42:09.720473+00
+psychological-counseling,coaching-counseling,심리 상담,psychological-counseling,,,0,false,3,2025-10-24 05:42:09.720473+00
+publishing,web-maintenance,퍼블리싱,publishing,,,0,false,2,2025-10-24 05:42:09.720473+00
+qa-test,security-quality,QA·테스트,qa-test,,,0,false,1,2025-10-24 05:42:09.720473+00
+queue-waiting,booking-agency,줄서기 대행,queue-waiting,,,0,false,0,2025-10-24 05:42:09.720473+00
+quick-delivery,delivery-service,퀵 서비스,quick-delivery,,,0,true,0,2025-10-24 05:42:09.720473+00
+reels-shorts-tiktok-management,channel-activation,릴스·숏츠·틱톡 관리,reels-shorts-tiktok-management,,,0,true,4,2025-10-24 05:42:09.720473+00
+relationship-counseling,coaching-counseling,연애 상담,relationship-counseling,,,0,false,2,2025-10-24 05:42:09.720473+00
+rental-service,life-service,렌탈 서비스,rental-service,,,0,false,4,2025-10-24 05:42:09.720473+00
+repair-service,home-service,일반 수리 서비스,repair-service,,,0,false,7,2025-10-24 05:42:09.720473+00
+report-writing,business-documents,보고서 작성,report-writing,,,0,false,2,2025-10-24 05:42:09.720473+00
+research-paper,academic-documents,연구 보고서,research-paper,,,0,false,0,2025-10-24 05:42:09.720473+00
+restaurant-booking,booking-agency,레스토랑 예약 대행,restaurant-booking,,,0,false,1,2025-10-24 05:42:09.720473+00
+resume-writing,job-preparation,이력서 작성,resume-writing,,,0,false,0,2025-10-24 05:42:09.720473+00
+return-exchange,errand-service,반품/교환 대행,return-exchange,,,0,false,3,2025-10-24 05:42:09.720473+00
+revenue-automation,program,수익 자동화,revenue-automation,,,0,true,1,2025-10-24 05:42:09.720473+00
+rhymix,web-builder,라이믹스,rhymix,,,0,false,0,2025-10-24 05:42:09.720473+00
+sales-consulting,corporate-consulting,세일즈,sales-consulting,,,0,true,0,2025-10-24 05:42:09.720473+00
+scenario-writing,creative-writing,시나리오,scenario-writing,,,0,false,1,2025-10-24 05:42:09.720473+00
+script-writing,content-writing,대본 작성,script-writing,,,0,false,1,2025-10-24 05:42:09.720473+00
+search-optimization-seo,web-maintenance,검색최적화·SEO,search-optimization-seo,,,0,true,3,2025-10-24 05:42:09.720473+00
+secondhand-trade,errand-service,중고 거래 대행,secondhand-trade,,,0,false,2,2025-10-24 05:42:09.720473+00
+security-quality,it-programming,보안·품질관리,security-quality,,,0,false,5,2025-10-24 05:42:09.720473+00
+seminar-conference,event-planning,세미나/컨퍼런스,seminar-conference,,,0,false,3,2025-10-24 05:42:09.720473+00
+senior-care,daily-service,시니어 케어/간병,senior-care,,,0,false,5,2025-10-24 05:42:09.720473+00
+seo-optimization,marketing,SEO 최적화 노출,seo-optimization,,,0,false,4,2025-10-24 05:42:09.720473+00
+server-cloud,program,서버·클라우드,server-cloud,,,0,false,6,2025-10-24 05:42:09.720473+00
+service-mvp-development,it-etc,서비스·MVP 개발,service-mvp-development,,,0,false,0,2025-10-24 05:42:09.720473+00
+shopify,web-builder,쇼피파이,shopify,,,0,false,6,2025-10-24 05:42:09.720473+00
+shopping-errands,errand-service,장보기 대행,shopping-errands,,,0,true,0,2025-10-24 05:42:09.720473+00
+shopping-mall-modification-maintenance,web-maintenance,쇼핑몰 수정·유지보수,shopping-mall-modification-maintenance,,,0,false,1,2025-10-24 05:42:09.720473+00
+shopping-mall-new-creation,web-creation,쇼핑몰 신규 제작,shopping-mall-new-creation,,,0,true,1,2025-10-24 05:42:09.720473+00
+short-form-video,video,숏폼 영상,short-form-video,,,0,true,1,2025-10-24 05:42:09.720473+00
+show-host,entertainer,쇼호스트,show-host,,,0,false,2,2025-10-24 05:42:09.720473+00
+signature-seal,calligraphy-font,사인·직인,signature-seal,,,0,false,3,2025-10-24 05:42:09.720473+00
+signboard-construction,space-architecture,간판·시공,signboard-construction,,,0,false,3,2025-10-24 05:42:09.720473+00
+simultaneous-interpretation,interpretation,동시통역,simultaneous-interpretation,,,0,false,4,2025-10-24 05:42:09.720473+00
+sns-ad-thumbnail,marketing-design,SNS·광고소재·썸네일,sns-ad-thumbnail,,,0,true,1,2025-10-24 05:42:09.720473+00
+sns-ads,performance-ads,SNS 광고,sns-ads,,,0,true,0,2025-10-24 05:42:09.720473+00
+sound-effects,audio-production,효과음 제작,sound-effects,,,0,false,1,2025-10-24 05:42:09.720473+00
+space-architecture,design,공간·건축,space-architecture,,,0,false,11,2025-10-24 05:42:09.720473+00
+spanish-translation,document-translation,스페인어 번역,spanish-translation,,,0,false,3,2025-10-24 05:42:09.720473+00
+startup-consulting,business,스타트업 자문,startup-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+startup-consulting-general,consulting,창업 컨설팅,startup-consulting-general,,,0,true,0,2025-10-24 05:42:09.720473+00
+startup-hr-consulting,startup-consulting,스타트업 인사 자문,startup-hr-consulting,,,0,false,2,2025-10-24 05:42:09.720473+00
+startup-investment-attraction,startup-consulting,스타트업 투자 유치,startup-investment-attraction,,,0,true,3,2025-10-24 05:42:09.720473+00
+sticker-envelope-invitation,print-promotional,스티커·봉투·초대장,sticker-envelope-invitation,,,0,false,5,2025-10-24 05:42:09.720473+00
+store-marketing,industry-purpose,스토어 마케팅,store-marketing,,,0,false,0,2025-10-24 05:42:09.720473+00
+storyboard,video-photo-etc,콘티·스토리보드,storyboard,,,0,false,0,2025-10-24 05:42:09.720473+00
+studio-rental,video-photo-etc,스튜디오 렌탈,studio-rental,,,0,false,2,2025-10-24 05:42:09.720473+00
+styling-consulting,fashion-styling,스타일링 컨설팅,styling-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+subtitle-translation,media-translation,자막 번역,subtitle-translation,,,0,true,0,2025-10-24 05:42:09.720473+00
+tarot-reading,astrology-fortune,타로 리딩,tarot-reading,,,0,false,0,2025-10-24 05:42:09.720473+00
+tax-accounting,tax-legal-labor,세무·회계,tax-accounting,,,0,false,1,2025-10-24 05:42:09.720473+00
+tax-consulting,tax-accounting,세무 상담,tax-consulting,,,0,false,3,2025-10-24 05:42:09.720473+00
+tax-legal-labor,,세무/법무/노무,tax-legal-labor,"세무, 법률, 노무 전문 서비스",gavel,16,false,18,2025-10-24 05:42:09.720473+00
+tax-legal-labor-etc,tax-legal-labor,기타,tax-legal-labor-etc,,,0,false,4,2025-10-24 05:42:09.720473+00
+tax-return,tax-accounting,세금 신고,tax-return,,,0,false,2,2025-10-24 05:42:09.720473+00
+tax-service,finance-accounting,세무 서비스,tax-service,,,0,true,1,2025-10-24 05:42:09.720473+00
+technical-seo,seo-optimization,테크니컬 SEO,technical-seo,,,0,true,0,2025-10-24 05:42:09.720473+00
+technical-translation,professional-translation,기술 번역,technical-translation,,,0,false,2,2025-10-24 05:42:09.720473+00
+template-homepage,web-mobile-design,템플릿형 홈페이지,template-homepage,,,0,false,2,2025-10-24 05:42:09.720473+00
+templates,ebook-template,템플릿,templates,,,0,false,1,2025-10-24 05:42:09.720473+00
+thesis-consulting,thesis-research,논문 컨설팅,thesis-consulting,,,0,false,0,2025-10-24 05:42:09.720473+00
+thesis-editing-proofreading,thesis-research,논문 교정·편집,thesis-editing-proofreading,,,0,true,1,2025-10-24 05:42:09.720473+00
+thesis-research,writing,논문·자료 조사,thesis-research,,,0,false,2,2025-10-24 05:42:09.720473+00
+thesis-statistics-analysis,thesis-research,논문 통계분석,thesis-statistics-analysis,,,0,false,2,2025-10-24 05:42:09.720473+00
+threads-marketing,channel-activation,스레드 마케팅,threads-marketing,,,0,false,5,2025-10-24 05:42:09.720473+00
+total-ad-agency,industry-purpose,종합광고대행,total-ad-agency,,,0,false,6,2025-10-24 05:42:09.720473+00
+transcription,media-translation,음성 텍스트 변환,transcription,,,0,false,2,2025-10-24 05:42:09.720473+00
+translation,,번역/통역,translation,전문 번역 및 통역 서비스,language,25,false,70,2025-10-24 05:42:09.720473+00
+trend-tech,it-programming,트렌드,trend-tech,,,0,false,8,2025-10-24 05:42:09.720473+00
+typing-document,typing-editing,타이핑(문서),typing-document,,,0,false,0,2025-10-24 05:42:09.720473+00
+typing-editing,writing,타이핑·편집,typing-editing,,,0,false,3,2025-10-24 05:42:09.720473+00
+typing-video,typing-editing,타이핑(영상),typing-video,,,0,false,1,2025-10-24 05:42:09.720473+00
+typography,calligraphy-font,타이포그래피,typography,,,0,false,1,2025-10-24 05:42:09.720473+00
+typography-cg,computer-graphics,타이포그래피,typography-cg,,,0,false,4,2025-10-24 05:42:09.720473+00
+ui-ux-planning,job-position,UI·UX 기획,ui-ux-planning,,,0,false,0,2025-10-24 05:42:09.720473+00
+unmanned-space-rental-startup,industry-startup,무인점포·공간대여 창업,unmanned-space-rental-startup,,,0,false,8,2025-10-24 05:42:09.720473+00
+vehicle-service,life-service,차량 서비스,vehicle-service,,,0,false,2,2025-10-24 05:42:09.720473+00
+video,video-photo,영상,video,,,0,false,0,2025-10-24 05:42:09.720473+00
+video-ad,marketing-etc,영상 광고,video-ad,,,0,false,2,2025-10-24 05:42:09.720473+00
+video-etc,video,영상 기타,video-etc,,,0,false,11,2025-10-24 05:42:09.720473+00
+video-photo,,영상/사진,video-photo,영상 제작 및 사진 촬영,camera,44,false,85,2025-10-24 05:42:09.720473+00
+video-photo-etc,video-photo,기타,video-photo-etc,,,0,false,7,2025-10-24 05:42:09.720473+00
+video-photo-other,video-photo-etc,기타 영상·사진·음향,video-photo-other,,,0,false,3,2025-10-24 05:42:09.720473+00
+video-post-production,video,영상 후반작업,video-post-production,,,0,false,9,2025-10-24 05:42:09.720473+00
+viral-posting,viral-sponsorship,바이럴·포스팅,viral-posting,,,0,false,2,2025-10-24 05:42:09.720473+00
+viral-sponsorship,marketing,바이럴·협찬,viral-sponsorship,,,0,false,1,2025-10-24 05:42:09.720473+00
+virtual-assistant,business-support,가상 비서,virtual-assistant,,,0,false,0,2025-10-24 05:42:09.720473+00
+vision-mission-branding,startup-consulting,비전·미션·초기 브랜딩,vision-mission-branding,,,0,true,0,2025-10-24 05:42:09.720473+00
+voice-actor,audio,성우,voice-actor,,,0,false,0,2025-10-24 05:42:09.720473+00
+voice-narration,music-audio,보이스/나레이션,voice-narration,,,0,false,2,2025-10-24 05:42:09.720473+00
+voice-over,voice-narration,성우/나레이션,voice-over,,,0,true,0,2025-10-24 05:42:09.720473+00
+vr-ar-game,game-web3,VR·AR·게임,vr-ar-game,,,0,false,0,2025-10-24 05:42:09.720473+00
+web-builder,it-programming,웹빌더,web-builder,,,0,false,0,2025-10-24 05:42:09.720473+00
+web-creation,it-programming,웹 제작,web-creation,,,0,false,1,2025-10-24 05:42:09.720473+00
+web-maintenance,it-programming,웹 유지보수,web-maintenance,,,0,false,2,2025-10-24 05:42:09.720473+00
+web-mobile-design,design,웹·모바일 디자인,web-mobile-design,,,0,false,2,2025-10-24 05:42:09.720473+00
+web-ui-ux,web-mobile-design,웹 UI·UX,web-ui-ux,,,0,true,0,2025-10-24 05:42:09.720473+00
+webtoon-story,creative-writing,웹툰 스토리,webtoon-story,,,0,false,2,2025-10-24 05:42:09.720473+00
+webtoon-storyboard,character-illustration,웹툰·콘티,webtoon-storyboard,,,0,false,2,2025-10-24 05:42:09.720473+00
+wedding-planning,event-planning,웨딩 플래닝,wedding-planning,,,0,false,0,2025-10-24 05:42:09.720473+00
+whiteboard-animation,animation,화이트보드 애니메이션,whiteboard-animation,,,0,false,2,2025-10-24 05:42:09.720473+00
+wix,web-builder,윅스,wix,,,0,false,7,2025-10-24 05:42:09.720473+00
+wordpress,web-builder,워드프레스,wordpress,,,0,true,2,2025-10-24 05:42:09.720473+00
+work-automation,program,업무 자동화,work-automation,,,0,true,2,2025-10-24 05:42:09.720473+00
+work-instruction-diagram,fashion-textile,작업지시서·도식화,work-instruction-diagram,,,0,false,1,2025-10-24 05:42:09.720473+00
+worker-labor-consulting,labor-service,근로자 노무 상담,worker-labor-consulting,,,0,false,1,2025-10-24 05:42:09.720473+00
+writing,,문서/글쓰기,writing,전문적인 문서 작성 서비스,pen-fancy,32,false,80,2025-10-24 05:42:09.720473+00
+writing-etc,writing,기타,writing-etc,,,0,false,9,2025-10-24 05:42:09.720473+00
+yoga-pilates,health-wellness,요가/필라테스,yoga-pilates,,,0,false,2,2025-10-24 05:42:09.720473+00
+youtube-management,channel-activation,유튜브 관리,youtube-management,,,0,true,3,2025-10-24 05:42:09.720473+00
+youtube-video,video,유튜브 영상,youtube-video,,,0,true,6,2025-10-24 05:42:09.720473+00
